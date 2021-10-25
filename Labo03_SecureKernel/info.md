@@ -1,5 +1,13 @@
 # Labo 03
 
+## Tricks 
+
+### minicom
+
+Quitter `ctlr a`(pour lancer une commande de minicom) puis `q` pour quitter 
+
+
+
 ## Question 1
 
 ### Configure a secure kernel  
@@ -37,7 +45,7 @@
    1. Activer `Filter access to /dev/mem`
    2. Activer `Filter I/O access to /dev/mem` 
    3. Dans le sous dossier `Compile time check and compiler options`
-      1. Desactiver `Compile the kernel with debug info` 
+      1. Désactiver `Compile the kernel with debug info` 
       2. Activer `Strip assembler-generated symbols during link` 
 
 8. Dans `Security options`
@@ -49,7 +57,7 @@
       1. Activer `Enable heap memory zeroing on allocation by default  `
       2. Activer `Enable heap memory zeroing on free by default  `
 
-9. Dans `Networking support / Networking options /[*] TCP IP Networking -> [*] IP: TCP syncookie support` acitver 
+9. Dans `Networking support / Networking options /[*] TCP IP Networking -> [*] IP: TCP syncookie support` activer 
 
 10. Dans `File Systems` 
 
@@ -59,7 +67,57 @@
 
 ### Desactivate some kernel options  
 
+Dans le dossier `workspace...`
+
+commande `less .config` (Pour voir tout ce qui se trouve de le fichier .config de linux)
+
 ### For a next laboratory  
+
+1. Dans `General Setup`
+   1. Activer `Initial RAM File system and RAM Disk ...` 
 
 ### Compile, install and test the modifications  
 
+
+
+## Question 2
+
+`sysctl -w net.ipv4.ip_forward=0` désactive le mode routeur du nano-pi pour vérifier taper `cat /proc/sys/net/ipv4/ip_forward` dans le nano-pi ceci doit retourner 0
+
+### Initialize /etc/sysctl.conf
+
+Dans `workspace/nano/buildroot/board/friendlyarm/nanopi-neo-plus2/rootfs-overlay/etc` 
+
+1. Exécuter la commande `sudo nano sysctl.conf`
+
+   1. Copier/Coller les commandes de la slide 39 de 3_complieKernel
+
+      kernel.randomize_va_space=2
+      net.ipv4.conf.lo.rp_filter=1
+      net.ipv4.conf.eth0.rp_filter=1
+      net.ipv4.conf.lo.accept_source_route=0
+      net.ipv4.conf.eth0.accept_source_route=0
+      net.ipv4.conf.lo.accept_redirects=0
+      net.ipv4.conf.eth0.accept_redirects=0
+      net.ipv4.icmp_echo_ignore_broadcasts=1
+      net.ipv4.icmp_ignore_bogus_error_responses=1
+      net.ipv4.conf.lo.log_martians=1
+      net.ipv4.conf.eth0.log_martians=1
+      net.ipv4.tcp_syncookies=1
+
+### Write an initial script
+
+Dans `workspace/nano/buildroot/board/friendlyarm/nanopi-neo-plus2/rootfs-overlay/etc`
+
+1. Exécuter `mkdir init.d`
+2. Exécuter `cd init.d`
+3. Exécuter `nano S00KernelParameter`
+4. Ecrire de ce fichier `sysctl -p`
+5. `ctrl o` return `ctrl x`
+6. Dans le dossier `workspace/nano/buildroot` 
+   1. Exécuter `make`
+7. utiliser le script generate.sh
+
+#### Test 
+
+1. Aller dans `/proc/sys/net/ipv4/` -> vérifier les commande de syctl.conf 
