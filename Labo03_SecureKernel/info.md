@@ -88,7 +88,7 @@ commande `less .config` (Pour voir tout ce qui se trouve de le fichier .config d
 
 Dans `workspace/nano/buildroot/board/friendlyarm/nanopi-neo-plus2/rootfs-overlay/etc` 
 
-1. Exécuter la commande `sudo nano sysctl.conf`
+1. Exécuter la commande `nano sysctl.conf`
 
    1. Copier/Coller les commandes de la slide 39 de 3_complieKernel
 
