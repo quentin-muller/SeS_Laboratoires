@@ -88,6 +88,9 @@ commande `less .config` (Pour voir tout ce qui se trouve de le fichier .config d
 
 Dans `workspace/nano/buildroot/board/friendlyarm/nanopi-neo-plus2/rootfs-overlay/etc` 
 
+Si l'on fait `sudo nano sysctl.conf` on le crée en mode super user (root) ce qui bloque son utilisation par le système après coup 
+il faut donc simplement faire `nano sysctl.conf` pour le crée normalement.
+
 1. Exécuter la commande `nano sysctl.conf`
 
    1. Copier/Coller les commandes de la slide 39 de 3_complieKernel
