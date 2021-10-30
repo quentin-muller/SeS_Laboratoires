@@ -22,14 +22,14 @@ int main() {
 
     for (char i = 0;i<SIZE_TAB + SIZE_OVERFLOW ;i++) {
         tab[i] = i;
-        printf("%c, ",tab[i]);
+        //printf("%d, ",tab[i]);
     }
 
     printf("]\n Fin de l'écriture plus overflow\n[");
 
     for (char i = 0;i<SIZE_UNDERFLOW;i++) {
         tab[-i] = i;
-        printf("%c, ",tab[-i]);
+        //printf("%d, ",tab[-i]);
     }
     printf("]\n Fin de l'écriture plus overflow\n");
 
