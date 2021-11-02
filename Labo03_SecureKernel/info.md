@@ -61,7 +61,7 @@ Quitter `ctlr a`(pour lancer une commande de minicom) puis `q` pour quitter
 
 10. Dans `File Systems` 
 
-    1. ![Step to secure](C:\Users\quent\iCloudDrive\Documents\H_HES-SO\1er_semestre\MA_SeS\SeS_Laboratoires\Labo03_SecureKernel\StepSecure.PNG)
+    1. ![Step to secure](StepSecure.PNG)
 
     
 
