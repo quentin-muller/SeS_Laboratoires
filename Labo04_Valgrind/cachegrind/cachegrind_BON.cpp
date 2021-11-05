@@ -19,7 +19,7 @@ unsigned char tableau[N][N];
 
 int main()
 {
-    cout << "Laboratoire 4 de Ses sur cachegrind" << endl;
+    cout << "Laboratoire 4 de SeS sur cachegrind" << endl;
     cout << "Programme bon :)" << endl;
     cout << "Remplir le tableau de manière continues" << endl;
     for (int i = 0; i < N; i++)
