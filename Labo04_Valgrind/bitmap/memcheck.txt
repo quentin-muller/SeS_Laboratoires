@@ -1,29 +1,29 @@
-==4583== Memcheck, a memory error detector
-==4583== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==4583== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==4583== Command: ./bitmap
-==4583== Parent PID: 4566
-==4583== 
-==4583== Invalid read of size 1
-==4583==    at 0x4014BF: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-==4583==    by 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-==4583==  Address 0x4ec7a4e is 2 bytes after a block of size 1,132 alloc'd
-==4583==    at 0x484222F: operator new[](unsigned long) (vg_replace_malloc.c:640)
-==4583==    by 0x401413: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-==4583==    by 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-==4583== 
-==4583== 
-==4583== HEAP SUMMARY:
-==4583==     in use at exit: 4,200 bytes in 1 blocks
-==4583==   total heap usage: 543 allocs, 542 frees, 1,104,996 bytes allocated
-==4583== 
-==4583== LEAK SUMMARY:
-==4583==    definitely lost: 4,200 bytes in 1 blocks
-==4583==    indirectly lost: 0 bytes in 0 blocks
-==4583==      possibly lost: 0 bytes in 0 blocks
-==4583==    still reachable: 0 bytes in 0 blocks
-==4583==         suppressed: 0 bytes in 0 blocks
-==4583== Rerun with --leak-check=full to see details of leaked memory
-==4583== 
-==4583== For lists of detected and suppressed errors, rerun with: -s
-==4583== ERROR SUMMARY: 240 errors from 1 contexts (suppressed: 0 from 0)
+==6616== Memcheck, a memory error detector
+==6616== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6616== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==6616== Command: ./bitmap
+==6616== Parent PID: 6601
+==6616== 
+==6616== Invalid read of size 1
+==6616==    at 0x4014BF: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+==6616==    by 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+==6616==  Address 0x4ec7a4e is 2 bytes after a block of size 1,132 alloc'd
+==6616==    at 0x484222F: operator new[](unsigned long) (vg_replace_malloc.c:640)
+==6616==    by 0x401413: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+==6616==    by 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+==6616== 
+==6616== 
+==6616== HEAP SUMMARY:
+==6616==     in use at exit: 4,200 bytes in 1 blocks
+==6616==   total heap usage: 543 allocs, 542 frees, 1,104,996 bytes allocated
+==6616== 
+==6616== LEAK SUMMARY:
+==6616==    definitely lost: 4,200 bytes in 1 blocks
+==6616==    indirectly lost: 0 bytes in 0 blocks
+==6616==      possibly lost: 0 bytes in 0 blocks
+==6616==    still reachable: 0 bytes in 0 blocks
+==6616==         suppressed: 0 bytes in 0 blocks
+==6616== Rerun with --leak-check=full to see details of leaked memory
+==6616== 
+==6616== For lists of detected and suppressed errors, rerun with: -s
+==6616== ERROR SUMMARY: 240 errors from 1 contexts (suppressed: 0 from 0)

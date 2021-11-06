@@ -16,4 +16,4 @@ g++ -Wall -Wextra massif/massif_PASBON.cpp -o massif/massif_pasbon
 
 # bitmap
 g++ -Wall -Wextra bitmap/bitmap.c -o bitmap/bitmap
-#g++ -Wall -Wextra bitmap/bitmap_repair.c -o bitmap/bitmap_repair
+g++ -Wall -Wextra bitmap/bitmap_corr.c -o bitmap/bitmap_corr

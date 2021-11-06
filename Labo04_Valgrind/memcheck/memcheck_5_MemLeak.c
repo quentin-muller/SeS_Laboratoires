@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define NB_ALLOC = 20;
+#define NB_ALLOC 20
 int main() {
     int * pMem = (int*) malloc(sizeof(int));
 

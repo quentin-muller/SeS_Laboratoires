@@ -1,39 +1,39 @@
-==4572== Memcheck, a memory error detector
-==4572== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==4572== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==4572== Command: ./memcheck_ovrlp
-==4572== Parent PID: 4566
-==4572== 
-==4572== Conditional jump or move depends on uninitialised value(s)
-==4572==    at 0x48CDB93: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==4572== 
-==4572== Use of uninitialised value of size 8
-==4572==    at 0x48B3B4B: _itoa_word (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==4572== 
-==4572== Conditional jump or move depends on uninitialised value(s)
-==4572==    at 0x48B3B5C: _itoa_word (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==4572==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==4572== 
-==4572== 
-==4572== HEAP SUMMARY:
-==4572==     in use at exit: 6 bytes in 1 blocks
-==4572==   total heap usage: 2 allocs, 1 frees, 1,030 bytes allocated
-==4572== 
-==4572== LEAK SUMMARY:
-==4572==    definitely lost: 6 bytes in 1 blocks
-==4572==    indirectly lost: 0 bytes in 0 blocks
-==4572==      possibly lost: 0 bytes in 0 blocks
-==4572==    still reachable: 0 bytes in 0 blocks
-==4572==         suppressed: 0 bytes in 0 blocks
-==4572== Rerun with --leak-check=full to see details of leaked memory
-==4572== 
-==4572== Use --track-origins=yes to see where uninitialised values come from
-==4572== For lists of detected and suppressed errors, rerun with: -s
-==4572== ERROR SUMMARY: 13 errors from 3 contexts (suppressed: 0 from 0)
+==6607== Memcheck, a memory error detector
+==6607== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6607== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==6607== Command: ./memcheck_ovrlp
+==6607== Parent PID: 6601
+==6607== 
+==6607== Conditional jump or move depends on uninitialised value(s)
+==6607==    at 0x48CDB93: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==6607== 
+==6607== Use of uninitialised value of size 8
+==6607==    at 0x48B3B4B: _itoa_word (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==6607== 
+==6607== Conditional jump or move depends on uninitialised value(s)
+==6607==    at 0x48B3B5C: _itoa_word (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==6607==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==6607== 
+==6607== 
+==6607== HEAP SUMMARY:
+==6607==     in use at exit: 6 bytes in 1 blocks
+==6607==   total heap usage: 2 allocs, 1 frees, 1,030 bytes allocated
+==6607== 
+==6607== LEAK SUMMARY:
+==6607==    definitely lost: 6 bytes in 1 blocks
+==6607==    indirectly lost: 0 bytes in 0 blocks
+==6607==      possibly lost: 0 bytes in 0 blocks
+==6607==    still reachable: 0 bytes in 0 blocks
+==6607==         suppressed: 0 bytes in 0 blocks
+==6607== Rerun with --leak-check=full to see details of leaked memory
+==6607== 
+==6607== Use --track-origins=yes to see where uninitialised values come from
+==6607== For lists of detected and suppressed errors, rerun with: -s
+==6607== ERROR SUMMARY: 13 errors from 3 contexts (suppressed: 0 from 0)

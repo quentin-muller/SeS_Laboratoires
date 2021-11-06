@@ -32,10 +32,11 @@ valgrind --log-file="cachegrind.txt" --tool=cachegrind --cachegrind-out-file="ca
 valgrind --log-file="callgrind.txt" --tool=callgrind --callgrind-out-file="callgrind.txt" ./bitmap
 valgrind --log-file="memcheck.txt" --tool=memcheck ./bitmap
 ms_print massif.out.pid > massif.txt
-## Test repaired file
-#valgrind --log-file="bitmap_repair.txt" --tool=massif --time-unit=B --massif-out-file="massif_repair.out.pid" ./bitmap_repair
-#valgrind --log-file="cachegrind_repair.txt" --tool=cachegrind --cachegrind-out-file="cachegrind_repair.txt" ./bitmap_repair
-#valgrind --log-file="callgrind_repair.txt" --tool=callgrind --callgrind-out-file="callgrind_repair.txt" ./bitmap_repair
-#valgrind --log-file="memcheck_repair.txt" --tool=memcheck ./bitmap_repair
-#ms_print massif_repair.out.pid > massif_repair.txt
-#cd ..
+
+# Test repaired file
+valgrind --log-file="bitmap_corr.txt" --tool=massif --time-unit=B --massif-out-file="massif_corr.out.pid" ./bitmap_corr
+#valgrind --log-file="cachegrind_corr.txt" --tool=cachegrind --cachegrind-out-file="cachegrind_corr.txt" ./bitmap_corr
+#valgrind --log-file="callgrind_corr.txt" --tool=callgrind --callgrind-out-file="callgrind_corr.txt" ./bitmap_corr
+valgrind --log-file="memcheck_corr.txt" --tool=memcheck ./bitmap_corr
+ms_print massif_corr.out.pid > massif_corr.txt
+cd ..
