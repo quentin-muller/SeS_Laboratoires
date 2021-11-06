@@ -1,34 +1,27 @@
 /* Laboratoire de SeS numero 4 - Valgrind
  * Quentin Müller et Tristan Traiber
  * 30.10.2021
- * 
- * Test de memcheck
- * 
- * 
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#define NB_ALLOC = 20;
 int main() {
-    const int intNumber = 20;
-    // Memory leak
     int * pMem = (int*) malloc(sizeof(int));
 
-
-    printf("Malloc without freeing, %d times\n",intNumber);
+    printf("Essai de l'allocation dynamique sans liberation");
+    printf("Allocation dynamique sans liberation, %d fois\n", NB_ALLOC);
     if(pMem != NULL){
-      for (int i = 0; i < intNumber; i++) {
+      for (int i = 0; i < NB_ALLOC; i++) {
         pMem = (int*) malloc(sizeof(int));
       }
-
-    }else{
-      printf("Base memory not initialized !\n");
     }
-
-
-    printf("\n----------------\n");
+    else{
+      printf("pMem pas init\n");
+    }
+    printf("\n********************************************\n");
 
     return 0;
 }

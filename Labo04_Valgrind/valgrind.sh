@@ -6,11 +6,11 @@ cd ..
 
 # Lancement de memcheck
 cd memcheck
-valgrind --log-file="memcheck_notalloc_log.txt" --tool=memcheck ./memcheck_acces
-valgrind --log-file="memcheck_notinit_log.txt" --tool=memcheck ./memcheck_undefuse
-valgrind --log-file="memcheck_free_log.txt" --tool=memcheck ./memcheck_incfree
-valgrind --log-file="memcheck_cpy_log.txt" --tool=memcheck ./memcheck_ovrlp
-valgrind --log-file="memcheck_leak_log.txt" --tool=memcheck ./memcheck_memleak
+valgrind --log-file="memcheck_acces_log.txt" --tool=memcheck ./memcheck_acces
+valgrind --log-file="memcheck_undefuse_log.txt" --tool=memcheck ./memcheck_undefuse
+valgrind --log-file="memcheck_incfree_log.txt" --tool=memcheck ./memcheck_incfree
+valgrind --log-file="memcheck_ovrlap_log.txt" --tool=memcheck ./memcheck_ovrlp
+valgrind --log-file="memcheck_memleak_log.txt" --tool=memcheck ./memcheck_memleak
 cd ..
 
 

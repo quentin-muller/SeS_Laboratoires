@@ -1,0 +1,25 @@
+==4571== Memcheck, a memory error detector
+==4571== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4571== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==4571== Command: ./memcheck_incfree
+==4571== Parent PID: 4566
+==4571== 
+==4571== Invalid free() / delete / delete[] / realloc()
+==4571==    at 0x48430E4: free (vg_replace_malloc.c:872)
+==4571==    by 0x401184: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_incfree)
+==4571==  Address 0x4a33040 is 0 bytes inside a block of size 4 free'd
+==4571==    at 0x48430E4: free (vg_replace_malloc.c:872)
+==4571==    by 0x401178: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_incfree)
+==4571==  Block was alloc'd at
+==4571==    at 0x484086F: malloc (vg_replace_malloc.c:381)
+==4571==    by 0x401157: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_incfree)
+==4571== 
+==4571== 
+==4571== HEAP SUMMARY:
+==4571==     in use at exit: 0 bytes in 0 blocks
+==4571==   total heap usage: 2 allocs, 3 frees, 1,028 bytes allocated
+==4571== 
+==4571== All heap blocks were freed -- no leaks are possible
+==4571== 
+==4571== For lists of detected and suppressed errors, rerun with: -s
+==4571== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

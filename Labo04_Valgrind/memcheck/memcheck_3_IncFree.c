@@ -1,10 +1,6 @@
 /* Laboratoire de SeS numero 4 - Valgrind
  * Quentin Müller et Tristan Traiber
  * 30.10.2021
- * 
- * Test de memcheck
- * 
- * 
 */
 
 #include <stdio.h>
@@ -12,19 +8,17 @@
 #include <string.h>
 
 int main() {
+    int * pMem = (int*) malloc(sizeof(int));
 
-    // Double freeing memory
-    int * pMemory = (int*) malloc(sizeof(int));
-
-    printf("Double freeing memory\n");
-    if(pMemory != NULL){
-      free((void*)pMemory);
-      free((void*)pMemory);
-    }else{
-      printf("No memory was freed !\n");
+    printf("Essai de la double lberation de la memoire\n");
+    if(pMem != NULL){
+      free((void*)pMem);
+      free((void*)pMem);
     }
-
-    printf("\n----------------\n");
+    else{
+      printf("Pas de memoire a liberer !\n");
+    }
+    printf("\n********************************************\n");
 
     return 0;
 }

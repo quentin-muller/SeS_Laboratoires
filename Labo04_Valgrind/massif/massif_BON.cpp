@@ -36,7 +36,7 @@ void liberation(unsigned int i)
 
 int main()
 {
-    cout << "Laboratoire 4 de Ses sur cachegrind" << endl;
+    cout << "Laboratoire 4 de SeS sur massif" << endl;
     cout << "Programme bon :)" << endl;
     // on alloue tout le tableau
     for (int i = 0; i < N_TAB; i++)

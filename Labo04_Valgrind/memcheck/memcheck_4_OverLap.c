@@ -1,10 +1,6 @@
 /* Laboratoire de SeS numero 4 - Valgrind
  * Quentin Müller et Tristan Traiber
  * 30.10.2021
- * 
- * Test de memcheck
- * 
- * 
 */
 
 #include <stdio.h>
@@ -13,26 +9,23 @@
 
 int main() {
 
-    // using memcpy on overlapping pointers
-    // pointer to an int with 2 free bytes after
-    int * pDest = (int*) malloc(sizeof(int)+2);
-    int * pSource = (int*) ((char*) pDest + 2);
+    int * pTO = (int*) malloc(sizeof(int)+2);
+    int * pFROM = (int*) ((char*) pTO + 2);
 
-    *pSource = 4;
+    *pFROM = 6;
+    printf("Essai de copie avec memcpy de trop grande valeur");
+    printf("Copie des data depuis pFROM a pTO avec 2 bytes supplementaire\n");
+    if(pFROM != NULL){
+      printf("pFROM data / attendue = 6      / lue = %d\n",*pFROM);
+      printf("pTO data   / attendue = 393216 / lue = %d\n",*pTO);
 
-    printf("Copying data from source to destination (2-byte overlap)\n");
-    if(pSource != NULL){
-      printf("Source pointer data : expected = 4, actual = %d\n",*pSource);
-      printf("Dest pointer data : expected = 262144, actual = %d\n",*pDest);
-      memcpy(pDest,pSource,sizeof(int));
-      printf("Source pointer data : expected = 4, actual = %d\n",*pSource);
-      printf("Dest pointer data : expected = 262144, actual = %d\n",*pDest);
-    }else{
-      printf("Source not initialized !\n");
+      memcpy(pTO,pFROM,sizeof(int));
+      printf("pFROM data / attendue = 6      / lue = %d\n",*pFROM);
+      printf("pTO data   / attendue = 6      / lue = %d\n",*pTO);
     }
-    printf("\n----------------\n");
-
-
-
+    else{
+      printf("pFROM pas init !\n");
+    }
+    printf("\n********************************************\n");
     return 0;
 }

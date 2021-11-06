@@ -1,0 +1,633 @@
+desc: --time-unit=B --massif-out-file=massif.out.pid
+cmd: ./bitmap
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=72712
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=103296
+mem_heap_B=103032
+mem_heap_extra_B=264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=134400
+mem_heap_B=133880
+mem_heap_extra_B=520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=165504
+mem_heap_B=164728
+mem_heap_extra_B=776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=196608
+mem_heap_B=195576
+mem_heap_extra_B=1032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=227712
+mem_heap_B=226424
+mem_heap_extra_B=1288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=260760
+mem_heap_B=259200
+mem_heap_extra_B=1560
+mem_stacks_B=0
+heap_tree=detailed
+n4: 259200 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 179304 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 179304 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 4200 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 4200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n0: 2992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=291864
+mem_heap_B=290048
+mem_heap_extra_B=1816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=322968
+mem_heap_B=320896
+mem_heap_extra_B=2072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=354072
+mem_heap_B=351744
+mem_heap_extra_B=2328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=385176
+mem_heap_B=382592
+mem_heap_extra_B=2584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=416280
+mem_heap_B=413440
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=detailed
+n4: 413440 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 333544 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 333544 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 4200 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 4200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n0: 2992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=447384
+mem_heap_B=444288
+mem_heap_extra_B=3096
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=478488
+mem_heap_B=475136
+mem_heap_extra_B=3352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=509592
+mem_heap_B=505984
+mem_heap_extra_B=3608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=540696
+mem_heap_B=536832
+mem_heap_extra_B=3864
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=571800
+mem_heap_B=567680
+mem_heap_extra_B=4120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=602904
+mem_heap_B=598528
+mem_heap_extra_B=4376
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=634008
+mem_heap_B=629376
+mem_heap_extra_B=4632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=665112
+mem_heap_B=660224
+mem_heap_extra_B=4888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=696216
+mem_heap_B=691072
+mem_heap_extra_B=5144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=727320
+mem_heap_B=721920
+mem_heap_extra_B=5400
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=758424
+mem_heap_B=752768
+mem_heap_extra_B=5656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=789528
+mem_heap_B=783616
+mem_heap_extra_B=5912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=843960
+mem_heap_B=837600
+mem_heap_extra_B=6360
+mem_stacks_B=0
+heap_tree=detailed
+n3: 837600 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 757704 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 757704 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n0: 7192 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=875064
+mem_heap_B=868448
+mem_heap_extra_B=6616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=906168
+mem_heap_B=899296
+mem_heap_extra_B=6872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=937272
+mem_heap_B=930144
+mem_heap_extra_B=7128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=968376
+mem_heap_B=960992
+mem_heap_extra_B=7384
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=999480
+mem_heap_B=991840
+mem_heap_extra_B=7640
+mem_stacks_B=0
+heap_tree=detailed
+n3: 991840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 911944 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 911944 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n0: 7192 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=1030584
+mem_heap_B=1022688
+mem_heap_extra_B=7896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1061688
+mem_heap_B=1053536
+mem_heap_extra_B=8152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1103232
+mem_heap_B=1094724
+mem_heap_extra_B=8508
+mem_stacks_B=0
+heap_tree=peak
+n3: 1094724 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1012200 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 1012200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n0: 9820 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=1150608
+mem_heap_B=1047752
+mem_heap_extra_B=8104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1181712
+mem_heap_B=1016904
+mem_heap_extra_B=7848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1212816
+mem_heap_B=986056
+mem_heap_extra_B=7592
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1243920
+mem_heap_B=955208
+mem_heap_extra_B=7336
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1275024
+mem_heap_B=924360
+mem_heap_extra_B=7080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1306128
+mem_heap_B=893512
+mem_heap_extra_B=6824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1337232
+mem_heap_B=862664
+mem_heap_extra_B=6568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1368336
+mem_heap_B=831816
+mem_heap_extra_B=6312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1399440
+mem_heap_B=800968
+mem_heap_extra_B=6056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1430544
+mem_heap_B=770120
+mem_heap_extra_B=5800
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1461648
+mem_heap_B=739272
+mem_heap_extra_B=5544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1492752
+mem_heap_B=708424
+mem_heap_extra_B=5288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1523856
+mem_heap_B=677576
+mem_heap_extra_B=5032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1554960
+mem_heap_B=646728
+mem_heap_extra_B=4776
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1586064
+mem_heap_B=615880
+mem_heap_extra_B=4520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1617168
+mem_heap_B=585032
+mem_heap_extra_B=4264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1648272
+mem_heap_B=554184
+mem_heap_extra_B=4008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1679376
+mem_heap_B=523336
+mem_heap_extra_B=3752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1710480
+mem_heap_B=492488
+mem_heap_extra_B=3496
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1741584
+mem_heap_B=461640
+mem_heap_extra_B=3240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1772688
+mem_heap_B=430792
+mem_heap_extra_B=2984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1803792
+mem_heap_B=399944
+mem_heap_extra_B=2728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1834896
+mem_heap_B=369096
+mem_heap_extra_B=2472
+mem_stacks_B=0
+heap_tree=detailed
+n4: 369096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 289200 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 289200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 4200 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 4200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n0: 2992 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=1866000
+mem_heap_B=338248
+mem_heap_extra_B=2216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1897104
+mem_heap_B=307400
+mem_heap_extra_B=1960
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1928208
+mem_heap_B=276552
+mem_heap_extra_B=1704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1959312
+mem_heap_B=245704
+mem_heap_extra_B=1448
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1990416
+mem_heap_B=214856
+mem_heap_extra_B=1192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=2021520
+mem_heap_B=184008
+mem_heap_extra_B=936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=2052624
+mem_heap_B=153160
+mem_heap_extra_B=680
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=2083728
+mem_heap_B=122312
+mem_heap_extra_B=424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=2114832
+mem_heap_B=91464
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=2145760
+mem_heap_B=81392
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=detailed
+n5: 81392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 4200 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  n0: 4200 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ n1: 3072 0x4C4A263: _IO_file_doallocate (in /usr/lib64/libc-2.33.so)
+  n2: 3072 0x4C58B6F: _IO_doallocbuf (in /usr/lib64/libc-2.33.so)
+   n1: 2048 0x4C56B33: _IO_file_xsgetn (in /usr/lib64/libc-2.33.so)
+    n3: 2048 0x4C4B2A2: fread (in /usr/lib64/libc-2.33.so)
+     n1: 1024 0x40169D: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+      n0: 1024 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+     n1: 1024 0x4016DB: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+      n0: 1024 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+     n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n1: 1024 0x4C57D27: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
+    n1: 1024 0x4C56DD5: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
+     n2: 1024 0x4C4B780: fwrite (in /usr/lib64/libc-2.33.so)
+      n1: 1024 0x40171C: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+       n0: 1024 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1416 0x4C4ACDE: __fopen_internal (in /usr/lib64/libc-2.33.so)
+  n0: 1416 in 6 places, all below massif's threshold (1.00%)
+ n0: 0 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=2223032
+mem_heap_B=4200
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
