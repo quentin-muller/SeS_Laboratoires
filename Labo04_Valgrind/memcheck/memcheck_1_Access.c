@@ -7,20 +7,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-int * otherStack();
+int * Stack0(){
+  int varStack0 = 8;
+  return &varStack0;
+}
 int main() {
 
     // Getting address to memory from another stack
-    int * pMemOtherStack = otherStack();
+    int * pStack0 = Stack0();
 
     printf("Essai d'acces memoire depuis une autre pile : \n");
-    printf("Valeur attendue\t: 4\n");
-    printf("Valeur lue \t: %d\n", * pMemOtherStack);
+    printf("Valeur attendue : 8 / lue : %d\n",* pStack0);
     printf("\n********************************************\n");
     return 0;
-}
-
-int * otherStack(){
-  static int unattainableMem = 4;
-  return &unattainableMem;
 }
