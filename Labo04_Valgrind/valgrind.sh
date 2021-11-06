@@ -6,11 +6,11 @@ cd ..
 
 # Lancement de memcheck
 cd memcheck
-valgrind --log-file="memcheck_notalloc_log.txt" --tool=memcheck ./memcheck_notalloc
-valgrind --log-file="memcheck_notinit_log.txt" --tool=memcheck ./memcheck_notinit
-valgrind --log-file="memcheck_free_log.txt" --tool=memcheck ./memcheck_free
-valgrind --log-file="memcheck_cpy_log.txt" --tool=memcheck ./memcheck_cpy
-valgrind --log-file="memcheck_leak_log.txt" --tool=memcheck ./memcheck_leak
+valgrind --log-file="memcheck_notalloc_log.txt" --tool=memcheck ./memcheck_acces
+valgrind --log-file="memcheck_notinit_log.txt" --tool=memcheck ./memcheck_undefuse
+valgrind --log-file="memcheck_free_log.txt" --tool=memcheck ./memcheck_incfree
+valgrind --log-file="memcheck_cpy_log.txt" --tool=memcheck ./memcheck_ovrlp
+valgrind --log-file="memcheck_leak_log.txt" --tool=memcheck ./memcheck_memleak
 cd ..
 
 
@@ -24,14 +24,14 @@ cd ..
 
 
 
-## bitmap
-#cd bitmap
-## Test wrong file
-#valgrind --log-file="massif.txt" --tool=massif --time-unit=B --massif-out-file="massif.out.pid" ./bitmap
-#valgrind --log-file="cachegrind.txt" --tool=cachegrind --cachegrind-out-file="cachegrind.txt" ./bitmap 
-#valgrind --log-file="callgrind.txt" --tool=callgrind --callgrind-out-file="callgrind.txt" ./bitmap
-#valgrind --log-file="memcheck.txt" --tool=memcheck ./bitmap
-#ms_print massif.out.pid > massif.txt
+# bitmap
+cd bitmap
+# Test wrong file
+valgrind --log-file="massif.txt" --tool=massif --time-unit=B --massif-out-file="massif.out.pid" ./bitmap
+valgrind --log-file="cachegrind.txt" --tool=cachegrind --cachegrind-out-file="cachegrind.txt" ./bitmap 
+valgrind --log-file="callgrind.txt" --tool=callgrind --callgrind-out-file="callgrind.txt" ./bitmap
+valgrind --log-file="memcheck.txt" --tool=memcheck ./bitmap
+ms_print massif.out.pid > massif.txt
 ## Test repaired file
 #valgrind --log-file="bitmap_repair.txt" --tool=massif --time-unit=B --massif-out-file="massif_repair.out.pid" ./bitmap_repair
 #valgrind --log-file="cachegrind_repair.txt" --tool=cachegrind --cachegrind-out-file="cachegrind_repair.txt" ./bitmap_repair

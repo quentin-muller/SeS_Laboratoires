@@ -1,0 +1,43 @@
+==47644== Memcheck, a memory error detector
+==47644== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==47644== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==47644== Command: ./memcheck_undefuse
+==47644== Parent PID: 47638
+==47644== 
+==47644== Conditional jump or move depends on uninitialised value(s)
+==47644==    at 0x48CDB93: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==47644== 
+==47644== Use of uninitialised value of size 8
+==47644==    at 0x48B3B4B: _itoa_word (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==47644== 
+==47644== Conditional jump or move depends on uninitialised value(s)
+==47644==    at 0x48B3B5C: _itoa_word (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==47644== 
+==47644== Conditional jump or move depends on uninitialised value(s)
+==47644==    at 0x48CE353: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==47644== 
+==47644== Conditional jump or move depends on uninitialised value(s)
+==47644==    at 0x48CDA77: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
+==47644==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==47644== 
+==47644== 
+==47644== HEAP SUMMARY:
+==47644==     in use at exit: 0 bytes in 0 blocks
+==47644==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==47644== 
+==47644== All heap blocks were freed -- no leaks are possible
+==47644== 
+==47644== Use --track-origins=yes to see where uninitialised values come from
+==47644== For lists of detected and suppressed errors, rerun with: -s
+==47644== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

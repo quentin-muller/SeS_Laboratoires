@@ -1,0 +1,157 @@
+desc: --time-unit=B --massif-out-file=out_PASBON.out.pid
+cmd: ./massif_PASBON
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=72712
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=73744
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=83752
+mem_heap_B=83728
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=93760
+mem_heap_B=93728
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=103768
+mem_heap_B=103728
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=113776
+mem_heap_B=113728
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=123784
+mem_heap_B=123728
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=133792
+mem_heap_B=133728
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=143800
+mem_heap_B=143728
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n3: 143728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 70000 0x401200: allocation(unsigned int) (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_PASBON)
+  n0: 70000 0x4012E4: main (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_PASBON)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=153808
+mem_heap_B=153728
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=163816
+mem_heap_B=163728
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=173824
+mem_heap_B=173728
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=173824
+mem_heap_B=173728
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=peak
+n3: 173728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 100000 0x401200: allocation(unsigned int) (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_PASBON)
+  n0: 100000 0x4012E4: main (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_PASBON)
+ n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x401060D: call_init (dl-init.c:74)
+   n1: 72704 0x401060D: call_init (dl-init.c:30)
+    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
+     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=183832
+mem_heap_B=163728
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=256544
+mem_heap_B=91024
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=257576
+mem_heap_B=90000
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty

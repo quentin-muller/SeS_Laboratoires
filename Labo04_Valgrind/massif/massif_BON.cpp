@@ -39,14 +39,14 @@ int main()
     cout << "Laboratoire 4 de Ses sur cachegrind" << endl;
     cout << "Programme bon :)" << endl;
     // on alloue tout le tableau
-    for (int i = 0; i < N_tableau; i++)
+    for (int i = 0; i < N_TAB; i++)
     {
         usleep(TIME_SLEEP);
         allocation(i);
     }
     cout << "Tout alloue" << endl;
     //on libère tout le tableau
-    for (int i = 0; i < N_tableau; i++)
+    for (int i = 0; i < N_TAB; i++)
     {
         usleep(TIME_SLEEP);
         liberation(i);

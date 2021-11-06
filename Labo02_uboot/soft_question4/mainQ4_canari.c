@@ -20,14 +20,14 @@ int main() {
 
     printf("\nDébut du programme\n[");
 
-    for (char i = 0;i<SIZE_TAB + SIZE_OVERFLOW ;i++) {
+    for (char i = 0;i<SIZE_TAB + SIZE_OVERFLOW ;i+=2) {
         tab[i] = i;
         //printf("%d, ",tab[i]);
     }
 
     printf("]\n Fin de l'écriture plus overflow\n[");
 
-    for (char i = 0;i<SIZE_UNDERFLOW;i++) {
+    for (char i = 0;i<SIZE_UNDERFLOW;i+=2) {
         tab[-i] = i;
         //printf("%d, ",tab[-i]);
     }
