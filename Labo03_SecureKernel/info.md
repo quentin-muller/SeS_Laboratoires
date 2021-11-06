@@ -96,6 +96,7 @@ il faut donc simplement faire `nano sysctl.conf` pour le crée normalement.
    1. Copier/Coller les commandes de la slide 39 de 3_complieKernel
 
       kernel.randomize_va_space=2
+      net.ipv4.ip_forward=0
       net.ipv4.conf.lo.rp_filter=1
       net.ipv4.conf.eth0.rp_filter=1
       net.ipv4.conf.lo.accept_source_route=0
