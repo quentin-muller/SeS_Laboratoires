@@ -1,39 +1,49 @@
-==10910== Memcheck, a memory error detector
-==10910== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==10910== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==10910== Command: ./memcheck_ovrlp
-==10910== Parent PID: 10896
-==10910== 
-==10910== Conditional jump or move depends on uninitialised value(s)
-==10910==    at 0x48CDB93: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==10910== 
-==10910== Use of uninitialised value of size 8
-==10910==    at 0x48B3B4B: _itoa_word (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==10910== 
-==10910== Conditional jump or move depends on uninitialised value(s)
-==10910==    at 0x48B3B5C: _itoa_word (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10910==    by 0x4011BF: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_ovrlp)
-==10910== 
-==10910== 
-==10910== HEAP SUMMARY:
-==10910==     in use at exit: 6 bytes in 1 blocks
-==10910==   total heap usage: 2 allocs, 1 frees, 1,030 bytes allocated
-==10910== 
-==10910== LEAK SUMMARY:
-==10910==    definitely lost: 6 bytes in 1 blocks
-==10910==    indirectly lost: 0 bytes in 0 blocks
-==10910==      possibly lost: 0 bytes in 0 blocks
-==10910==    still reachable: 0 bytes in 0 blocks
-==10910==         suppressed: 0 bytes in 0 blocks
-==10910== Rerun with --leak-check=full to see details of leaked memory
-==10910== 
-==10910== Use --track-origins=yes to see where uninitialised values come from
-==10910== For lists of detected and suppressed errors, rerun with: -s
-==10910== ERROR SUMMARY: 13 errors from 3 contexts (suppressed: 0 from 0)
+==213== Memcheck, a memory error detector
+==213== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==213== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==213== Command: ./memcheck_ovrlp
+==213== Parent PID: 207
+==213== 
+==213== Conditional jump or move depends on uninitialised value(s)
+==213==    at 0x48CEAD8: __vfprintf_internal (vfprintf-internal.c:1687)
+==213==    by 0x48B8EBE: printf (printf.c:33)
+==213==    by 0x10920E: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==213== 
+==213== Use of uninitialised value of size 8
+==213==    at 0x48B281B: _itoa_word (_itoa.c:179)
+==213==    by 0x48CE6F4: __vfprintf_internal (vfprintf-internal.c:1687)
+==213==    by 0x48B8EBE: printf (printf.c:33)
+==213==    by 0x10920E: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==213== 
+==213== Conditional jump or move depends on uninitialised value(s)
+==213==    at 0x48B282D: _itoa_word (_itoa.c:179)
+==213==    by 0x48CE6F4: __vfprintf_internal (vfprintf-internal.c:1687)
+==213==    by 0x48B8EBE: printf (printf.c:33)
+==213==    by 0x10920E: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==213== 
+==213== Conditional jump or move depends on uninitialised value(s)
+==213==    at 0x48CF3A8: __vfprintf_internal (vfprintf-internal.c:1687)
+==213==    by 0x48B8EBE: printf (printf.c:33)
+==213==    by 0x10920E: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==213== 
+==213== Conditional jump or move depends on uninitialised value(s)
+==213==    at 0x48CE86E: __vfprintf_internal (vfprintf-internal.c:1687)
+==213==    by 0x48B8EBE: printf (printf.c:33)
+==213==    by 0x10920E: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_ovrlp)
+==213== 
+==213== 
+==213== HEAP SUMMARY:
+==213==     in use at exit: 6 bytes in 1 blocks
+==213==   total heap usage: 2 allocs, 1 frees, 1,030 bytes allocated
+==213== 
+==213== LEAK SUMMARY:
+==213==    definitely lost: 6 bytes in 1 blocks
+==213==    indirectly lost: 0 bytes in 0 blocks
+==213==      possibly lost: 0 bytes in 0 blocks
+==213==    still reachable: 0 bytes in 0 blocks
+==213==         suppressed: 0 bytes in 0 blocks
+==213== Rerun with --leak-check=full to see details of leaked memory
+==213== 
+==213== Use --track-origins=yes to see where uninitialised values come from
+==213== For lists of detected and suppressed errors, rerun with: -s
+==213== ERROR SUMMARY: 15 errors from 5 contexts (suppressed: 0 from 0)

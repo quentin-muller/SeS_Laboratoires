@@ -158,7 +158,7 @@ struct {
 
 
 	     unsigned short j;
-	     for (j=0; j<widthLoop; j=j+1, hiddenText.p_rgb++) // #corr limite de la boucle
+	     for (j=0; j<=widthLoop; j=j+1, hiddenText.p_rgb++) // #corr limite de la boucle
              {
                  if ((hiddenText.p_rgb->Blue != WHITE) ||
                      (hiddenText.p_rgb->Green!= WHITE) ||

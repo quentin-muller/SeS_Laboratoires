@@ -1,43 +1,43 @@
-==10905== Memcheck, a memory error detector
-==10905== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==10905== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==10905== Command: ./memcheck_undefuse
-==10905== Parent PID: 10896
-==10905== 
-==10905== Conditional jump or move depends on uninitialised value(s)
-==10905==    at 0x48CDB93: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
-==10905== 
-==10905== Use of uninitialised value of size 8
-==10905==    at 0x48B3B4B: _itoa_word (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
-==10905== 
-==10905== Conditional jump or move depends on uninitialised value(s)
-==10905==    at 0x48B3B5C: _itoa_word (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48CD95B: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
-==10905== 
-==10905== Conditional jump or move depends on uninitialised value(s)
-==10905==    at 0x48CE353: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
-==10905== 
-==10905== Conditional jump or move depends on uninitialised value(s)
-==10905==    at 0x48CDA77: __vfprintf_internal (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x48B9B7E: printf (in /usr/lib64/libc-2.33.so)
-==10905==    by 0x40115B: main (in /home/lmi/SeS/Labo04_Valgrind/memcheck/memcheck_undefuse)
-==10905== 
-==10905== 
-==10905== HEAP SUMMARY:
-==10905==     in use at exit: 0 bytes in 0 blocks
-==10905==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
-==10905== 
-==10905== All heap blocks were freed -- no leaks are possible
-==10905== 
-==10905== Use --track-origins=yes to see where uninitialised values come from
-==10905== For lists of detected and suppressed errors, rerun with: -s
-==10905== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==211== Memcheck, a memory error detector
+==211== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==211== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==211== Command: ./memcheck_undefuse
+==211== Parent PID: 207
+==211== 
+==211== Conditional jump or move depends on uninitialised value(s)
+==211==    at 0x48CEAD8: __vfprintf_internal (vfprintf-internal.c:1687)
+==211==    by 0x48B8EBE: printf (printf.c:33)
+==211==    by 0x109196: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==211== 
+==211== Use of uninitialised value of size 8
+==211==    at 0x48B281B: _itoa_word (_itoa.c:179)
+==211==    by 0x48CE6F4: __vfprintf_internal (vfprintf-internal.c:1687)
+==211==    by 0x48B8EBE: printf (printf.c:33)
+==211==    by 0x109196: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==211== 
+==211== Conditional jump or move depends on uninitialised value(s)
+==211==    at 0x48B282D: _itoa_word (_itoa.c:179)
+==211==    by 0x48CE6F4: __vfprintf_internal (vfprintf-internal.c:1687)
+==211==    by 0x48B8EBE: printf (printf.c:33)
+==211==    by 0x109196: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==211== 
+==211== Conditional jump or move depends on uninitialised value(s)
+==211==    at 0x48CF3A8: __vfprintf_internal (vfprintf-internal.c:1687)
+==211==    by 0x48B8EBE: printf (printf.c:33)
+==211==    by 0x109196: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==211== 
+==211== Conditional jump or move depends on uninitialised value(s)
+==211==    at 0x48CE86E: __vfprintf_internal (vfprintf-internal.c:1687)
+==211==    by 0x48B8EBE: printf (printf.c:33)
+==211==    by 0x109196: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/memcheck/memcheck_undefuse)
+==211== 
+==211== 
+==211== HEAP SUMMARY:
+==211==     in use at exit: 0 bytes in 0 blocks
+==211==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==211== 
+==211== All heap blocks were freed -- no leaks are possible
+==211== 
+==211== Use --track-origins=yes to see where uninitialised values come from
+==211== For lists of detected and suppressed errors, rerun with: -s
+==211== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)

@@ -82,13 +82,13 @@ mem_heap_extra_B=72
 mem_stacks_B=0
 heap_tree=detailed
 n3: 143728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-  n1: 72704 0x401060D: call_init (dl-init.c:74)
-   n1: 72704 0x401060D: call_init (dl-init.c:30)
-    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
-     n0: 72704 0x40010C9: ??? (rtld.c:658)
- n1: 70000 0x401200: allocation(unsigned int) (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_BON)
-  n0: 70000 0x4012E4: main (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_BON)
+ n1: 72704 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 70000 0x109285: allocation(unsigned int) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/massif/massif_BON)
+  n0: 70000 0x1093C7: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/massif/massif_BON)
  n0: 1024 in 1 place, below massif's threshold (1.00%)
 #-----------
 snapshot=10
@@ -123,13 +123,13 @@ mem_heap_extra_B=96
 mem_stacks_B=0
 heap_tree=peak
 n3: 173728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 100000 0x401200: allocation(unsigned int) (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_BON)
-  n0: 100000 0x4012E4: main (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_BON)
- n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-  n1: 72704 0x401060D: call_init (dl-init.c:74)
-   n1: 72704 0x401060D: call_init (dl-init.c:30)
-    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
-     n0: 72704 0x40010C9: ??? (rtld.c:658)
+ n1: 100000 0x109285: allocation(unsigned int) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/massif/massif_BON)
+  n0: 100000 0x1093C7: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/massif/massif_BON)
+ n1: 72704 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
  n0: 1024 in 1 place, below massif's threshold (1.00%)
 #-----------
 snapshot=14
@@ -212,19 +212,20 @@ mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=detailed
 n3: 73728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
- n1: 72704 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-  n1: 72704 0x401060D: call_init (dl-init.c:74)
-   n1: 72704 0x401060D: call_init (dl-init.c:30)
-    n1: 72704 0x40106FB: _dl_init (dl-init.c:121)
-     n0: 72704 0x40010C9: ??? (rtld.c:658)
- n1: 1024 0x4C4A263: _IO_file_doallocate (in /usr/lib64/libc-2.33.so)
-  n1: 1024 0x4C58B6F: _IO_doallocbuf (in /usr/lib64/libc-2.33.so)
-   n1: 1024 0x4C57D27: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
-    n1: 1024 0x4C56DD5: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
-     n1: 1024 0x4C4B780: fwrite (in /usr/lib64/libc-2.33.so)
-      n1: 1024 0x498D303: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib64/libstdc++.so.6.0.29)
-       n1: 1024 0x498D68B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib64/libstdc++.so.6.0.29)
-        n0: 1024 0x40129E: main (in /home/lmi/SeS/Labo04_Valgrind/massif/massif_BON)
+ n1: 72704 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4AC204F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4AC10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4ABF834: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4ABF834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4AB3540: fwrite (iofwrite.c:39)
+       n1: 1024 0x497E823: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+        n1: 1024 0x497EBDB: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+         n0: 1024 0x109369: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/massif/massif_BON)
  n0: 0 in 1 place, below massif's threshold (1.00%)
 #-----------
 snapshot=24

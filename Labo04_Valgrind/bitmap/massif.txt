@@ -6,30 +6,30 @@ ms_print arguments: massif.out.pid
 
 
     MB
-1.052^                                   ##                                   
-     |                                  :# :                                  
-     |                                @::# :::                                
-     |                               :@::# ::::                               
-     |                             :::@::# ::::::                             
-     |                           @::::@::# ::::::::                           
-     |                         ::@::::@::# ::::::::::                         
-     |                       ::: @::::@::# :::::::::::                        
-     |                     ::::: @::::@::# :::::::::::::                      
-     |                    :::::: @::::@::# :::::::::::::::                    
-     |                  :::::::: @::::@::# :::::::::::::::::                  
-     |                :::::::::: @::::@::# ::::::::::::::::::                 
-     |              :::::::::::: @::::@::# ::::::::::::::::::::               
-     |             @:::::::::::: @::::@::# ::::::::::::::::::::::             
-     |           ::@:::::::::::: @::::@::# ::::::::::::::::::::::@:           
-     |         ::::@:::::::::::: @::::@::# ::::::::::::::::::::::@:::         
-     |       :@::::@:::::::::::: @::::@::# ::::::::::::::::::::::@::::        
-     |     :::@::::@:::::::::::: @::::@::# ::::::::::::::::::::::@::::::      
-     |    ::::@::::@:::::::::::: @::::@::# ::::::::::::::::::::::@::::::::    
-     |  ::::::@::::@:::::::::::: @::::@::# ::::::::::::::::::::::@:::::::::@@ 
+1.061^                                   #                                    
+     |                                  :#:                                   
+     |                                @::#:::                                 
+     |                               :@::#::::                                
+     |                             :::@::#::::::                              
+     |                           @::::@::#::::::::                            
+     |                         ::@::::@::#::::::::::                          
+     |                       ::: @::::@::#:::::::::::                         
+     |                     ::::: @::::@::#:::::::::::::                       
+     |                    :::::: @::::@::#:::::::::::::::                     
+     |                  :::::::: @::::@::#:::::::::::::::::                   
+     |                :::::::::: @::::@::#:::::::::::::::::::                 
+     |              :::::::::::: @::::@::#:::::::::::::::::::::               
+     |            :@:::::::::::: @::::@::#::::::::::::::::::::::@             
+     |           ::@:::::::::::: @::::@::#::::::::::::::::::::::@::           
+     |         ::::@:::::::::::: @::::@::#::::::::::::::::::::::@:::          
+     |       :@::::@:::::::::::: @::::@::#::::::::::::::::::::::@:::::        
+     |      ::@::::@:::::::::::: @::::@::#::::::::::::::::::::::@::::::       
+     |    ::::@::::@:::::::::::: @::::@::#::::::::::::::::::::::@::::::::     
+     |  ::::::@::::@:::::::::::: @::::@::#::::::::::::::::::::::@::::::::@::: 
    0 +----------------------------------------------------------------------->MB
-     0                                                                   2.120
+     0                                                                   2.155
 
-Number of snapshots: 68
+Number of snapshots: 70
  Detailed snapshots: [7, 12, 25, 30, 33 (peak), 56, 66]
 
 --------------------------------------------------------------------------------
@@ -37,206 +37,239 @@ Number of snapshots: 68
 --------------------------------------------------------------------------------
   0              0                0                0             0            0
   1         72,712           72,712           72,704             8            0
-  2        103,296          103,296          103,032           264            0
-  3        134,400          134,400          133,880           520            0
-  4        165,504          165,504          164,728           776            0
-  5        196,608          196,608          195,576         1,032            0
-  6        227,712          227,712          226,424         1,288            0
-  7        260,760          260,760          259,200         1,560            0
-99.40% (259,200B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->68.76% (179,304B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->68.76% (179,304B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+  2        101,664          101,664          101,464           200            0
+  3        132,768          132,768          132,312           456            0
+  4        163,872          163,872          163,160           712            0
+  5        194,976          194,976          194,008           968            0
+  6        226,080          226,080          224,856         1,224            0
+  7        266,904          266,904          265,344         1,560            0
+99.42% (265,344B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->67.18% (179,304B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->67.18% (179,304B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->27.88% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->27.88% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->27.88% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->27.88% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->27.88% (72,704B) 0x40010C9: ??? (rtld.c:658)
+->27.24% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->27.24% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->27.24% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->27.24% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->27.24% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
 |         
-->01.61% (4,200B) 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->01.61% (4,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+->03.07% (8,192B) 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.07% (8,192B) 0x4AC204F: _IO_doallocbuf (genops.c:347)
+|   ->01.53% (4,096B) 0x4ABF5C3: _IO_file_xsgetn (fileops.c:1288)
+|   | ->01.53% (4,096B) 0x4AB3062: fread (iofread.c:38)
+|   |   ->01.53% (4,096B) 0x1092FC: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   |     ->01.53% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   |       
+|   ->01.53% (4,096B) 0x4AC10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.53% (4,096B) 0x4ABF834: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.53% (4,096B) 0x4ABF834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.53% (4,096B) 0x4AB3540: fwrite (iofwrite.c:39)
+|           ->01.53% (4,096B) 0x10931F: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|             ->01.53% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|               
+->01.57% (4,200B) 0x10937D: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->01.57% (4,200B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->01.15% (2,992B) in 2 places, all below massif's threshold (1.00%)
+->00.35% (944B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8        298,008          298,008          296,192         1,816            0
+  9        329,112          329,112          327,040         2,072            0
+ 10        360,216          360,216          357,888         2,328            0
+ 11        391,320          391,320          388,736         2,584            0
+ 12        422,424          422,424          419,584         2,840            0
+99.33% (419,584B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->78.96% (333,544B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->78.96% (333,544B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   
+->17.21% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->17.21% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->17.21% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->17.21% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->17.21% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.94% (8,192B) 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.94% (8,192B) 0x4AC204F: _IO_doallocbuf (genops.c:347)
+|   ->01.94% (8,192B) in 2 places, all below massif's threshold (1.00%)
+|     
+->01.22% (5,144B) in 2 places, all below massif's threshold (1.00%)
   
 --------------------------------------------------------------------------------
   n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
 --------------------------------------------------------------------------------
-  8        291,864          291,864          290,048         1,816            0
-  9        322,968          322,968          320,896         2,072            0
- 10        354,072          354,072          351,744         2,328            0
- 11        385,176          385,176          382,592         2,584            0
- 12        416,280          416,280          413,440         2,840            0
-99.32% (413,440B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->80.12% (333,544B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->80.12% (333,544B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ 13        453,528          453,528          450,432         3,096            0
+ 14        484,632          484,632          481,280         3,352            0
+ 15        515,736          515,736          512,128         3,608            0
+ 16        546,840          546,840          542,976         3,864            0
+ 17        577,944          577,944          573,824         4,120            0
+ 18        609,048          609,048          604,672         4,376            0
+ 19        640,152          640,152          635,520         4,632            0
+ 20        671,256          671,256          666,368         4,888            0
+ 21        702,360          702,360          697,216         5,144            0
+ 22        733,464          733,464          728,064         5,400            0
+ 23        764,568          764,568          758,912         5,656            0
+ 24        795,672          795,672          789,760         5,912            0
+ 25        850,104          850,104          843,744         6,360            0
+99.25% (843,744B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->89.13% (757,704B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->89.13% (757,704B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->17.47% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->17.47% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->17.47% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->17.47% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->17.47% (72,704B) 0x40010C9: ??? (rtld.c:658)
+->08.55% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->08.55% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->08.55% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->08.55% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->08.55% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
 |         
-->01.01% (4,200B) 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->01.01% (4,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+->01.57% (13,336B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 26        881,208          881,208          874,592         6,616            0
+ 27        912,312          912,312          905,440         6,872            0
+ 28        943,416          943,416          936,288         7,128            0
+ 29        974,520          974,520          967,136         7,384            0
+ 30      1,005,624        1,005,624          997,984         7,640            0
+99.24% (997,984B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.68% (911,944B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->90.68% (911,944B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->00.72% (2,992B) in 1+ places, all below ms_print's threshold (01.00%)
+->07.23% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->07.23% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->07.23% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->07.23% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->07.23% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.33% (13,336B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31      1,036,728        1,036,728        1,028,832         7,896            0
+ 32      1,067,832        1,067,832        1,059,680         8,152            0
+ 33      1,112,448        1,112,448        1,103,940         8,508            0
+99.24% (1,103,940B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.99% (1,012,200B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->90.99% (1,012,200B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   
+->06.54% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->06.54% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->06.54% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->06.54% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->06.54% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.10% (12,288B) 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.10% (12,288B) 0x4AC204F: _IO_doallocbuf (genops.c:347)
+|   ->01.10% (12,288B) in 2 places, all below massif's threshold (1.00%)
+|     
+->00.61% (6,748B) in 1+ places, all below ms_print's threshold (01.00%)
 
 --------------------------------------------------------------------------------
   n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
 --------------------------------------------------------------------------------
- 13        447,384          447,384          444,288         3,096            0
- 14        478,488          478,488          475,136         3,352            0
- 15        509,592          509,592          505,984         3,608            0
- 16        540,696          540,696          536,832         3,864            0
- 17        571,800          571,800          567,680         4,120            0
- 18        602,904          602,904          598,528         4,376            0
- 19        634,008          634,008          629,376         4,632            0
- 20        665,112          665,112          660,224         4,888            0
- 21        696,216          696,216          691,072         5,144            0
- 22        727,320          727,320          721,920         5,400            0
- 23        758,424          758,424          752,768         5,656            0
- 24        789,528          789,528          783,616         5,912            0
- 25        843,960          843,960          837,600         6,360            0
-99.25% (837,600B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->89.78% (757,704B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->89.78% (757,704B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+ 34      1,160,952        1,063,944        1,055,824         8,120            0
+ 35      1,192,056        1,032,840        1,024,976         7,864            0
+ 36      1,223,160        1,001,736          994,128         7,608            0
+ 37      1,254,264          970,632          963,280         7,352            0
+ 38      1,285,368          939,528          932,432         7,096            0
+ 39      1,316,472          908,424          901,584         6,840            0
+ 40      1,347,576          877,320          870,736         6,584            0
+ 41      1,378,680          846,216          839,888         6,328            0
+ 42      1,409,784          815,112          809,040         6,072            0
+ 43      1,440,888          784,008          778,192         5,816            0
+ 44      1,471,992          752,904          747,344         5,560            0
+ 45      1,503,096          721,800          716,496         5,304            0
+ 46      1,534,200          690,696          685,648         5,048            0
+ 47      1,565,304          659,592          654,800         4,792            0
+ 48      1,596,408          628,488          623,952         4,536            0
+ 49      1,627,512          597,384          593,104         4,280            0
+ 50      1,656,672          568,224          564,184         4,040            0
+ 51      1,685,832          539,064          535,264         3,800            0
+ 52      1,714,992          509,904          506,344         3,560            0
+ 53      1,744,152          480,744          477,424         3,320            0
+ 54      1,773,312          451,584          448,504         3,080            0
+ 55      1,802,472          422,424          419,584         2,840            0
+ 56      1,831,632          393,264          390,664         2,600            0
+99.34% (390,664B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->77.46% (304,624B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->77.46% (304,624B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->08.61% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->08.61% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->08.61% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->08.61% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->08.61% (72,704B) 0x40010C9: ??? (rtld.c:658)
+->18.49% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->18.49% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->18.49% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->18.49% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->18.49% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
 |         
-->00.85% (7,192B) in 1+ places, all below ms_print's threshold (01.00%)
-
---------------------------------------------------------------------------------
-  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
---------------------------------------------------------------------------------
- 26        875,064          875,064          868,448         6,616            0
- 27        906,168          906,168          899,296         6,872            0
- 28        937,272          937,272          930,144         7,128            0
- 29        968,376          968,376          960,992         7,384            0
- 30        999,480          999,480          991,840         7,640            0
-99.24% (991,840B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->91.24% (911,944B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->91.24% (911,944B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   
-->07.27% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->07.27% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->07.27% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->07.27% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->07.27% (72,704B) 0x40010C9: ??? (rtld.c:658)
-|         
-->00.72% (7,192B) in 1+ places, all below ms_print's threshold (01.00%)
-
---------------------------------------------------------------------------------
-  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
---------------------------------------------------------------------------------
- 31      1,030,584        1,030,584        1,022,688         7,896            0
- 32      1,061,688        1,061,688        1,053,536         8,152            0
- 33      1,103,232        1,103,232        1,094,724         8,508            0
-99.23% (1,094,724B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->91.75% (1,012,200B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->91.75% (1,012,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   
-->06.59% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->06.59% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->06.59% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->06.59% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->06.59% (72,704B) 0x40010C9: ??? (rtld.c:658)
-|         
-->00.89% (9,820B) in 1+ places, all below ms_print's threshold (01.00%)
-
---------------------------------------------------------------------------------
-  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
---------------------------------------------------------------------------------
- 34      1,150,608        1,055,856        1,047,752         8,104            0
- 35      1,181,712        1,024,752        1,016,904         7,848            0
- 36      1,212,816          993,648          986,056         7,592            0
- 37      1,243,920          962,544          955,208         7,336            0
- 38      1,275,024          931,440          924,360         7,080            0
- 39      1,306,128          900,336          893,512         6,824            0
- 40      1,337,232          869,232          862,664         6,568            0
- 41      1,368,336          838,128          831,816         6,312            0
- 42      1,399,440          807,024          800,968         6,056            0
- 43      1,430,544          775,920          770,120         5,800            0
- 44      1,461,648          744,816          739,272         5,544            0
- 45      1,492,752          713,712          708,424         5,288            0
- 46      1,523,856          682,608          677,576         5,032            0
- 47      1,554,960          651,504          646,728         4,776            0
- 48      1,586,064          620,400          615,880         4,520            0
- 49      1,617,168          589,296          585,032         4,264            0
- 50      1,648,272          558,192          554,184         4,008            0
- 51      1,679,376          527,088          523,336         3,752            0
- 52      1,710,480          495,984          492,488         3,496            0
- 53      1,741,584          464,880          461,640         3,240            0
- 54      1,772,688          433,776          430,792         2,984            0
- 55      1,803,792          402,672          399,944         2,728            0
- 56      1,834,896          371,568          369,096         2,472            0
-99.33% (369,096B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->77.83% (289,200B) 0x401307: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->77.83% (289,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   
-->19.57% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->19.57% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->19.57% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->19.57% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->19.57% (72,704B) 0x40010C9: ??? (rtld.c:658)
-|         
-->01.13% (4,200B) 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->01.13% (4,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   
-->00.81% (2,992B) in 1+ places, all below ms_print's threshold (01.00%)
-
---------------------------------------------------------------------------------
-  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
---------------------------------------------------------------------------------
- 57      1,866,000          340,464          338,248         2,216            0
- 58      1,897,104          309,360          307,400         1,960            0
- 59      1,928,208          278,256          276,552         1,704            0
- 60      1,959,312          247,152          245,704         1,448            0
- 61      1,990,416          216,048          214,856         1,192            0
- 62      2,021,520          184,944          184,008           936            0
- 63      2,052,624          153,840          153,160           680            0
- 64      2,083,728          122,736          122,312           424            0
- 65      2,114,832           91,632           91,464           168            0
- 66      2,145,760           81,488           81,392            96            0
-99.88% (81,392B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
-->89.22% (72,704B) 0x4900AC9: ??? (in /usr/lib64/libstdc++.so.6.0.29)
-| ->89.22% (72,704B) 0x401060D: call_init (dl-init.c:74)
-|   ->89.22% (72,704B) 0x401060D: call_init (dl-init.c:30)
-|     ->89.22% (72,704B) 0x40106FB: _dl_init (dl-init.c:121)
-|       ->89.22% (72,704B) 0x40010C9: ??? (rtld.c:658)
-|         
-->05.15% (4,200B) 0x40129E: steganographyEncrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-| ->05.15% (4,200B) 0x40119D: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   
-->03.77% (3,072B) 0x4C4A263: _IO_file_doallocate (in /usr/lib64/libc-2.33.so)
-| ->03.77% (3,072B) 0x4C58B6F: _IO_doallocbuf (in /usr/lib64/libc-2.33.so)
-|   ->02.51% (2,048B) 0x4C56B33: _IO_file_xsgetn (in /usr/lib64/libc-2.33.so)
-|   | ->02.51% (2,048B) 0x4C4B2A2: fread (in /usr/lib64/libc-2.33.so)
-|   |   ->01.26% (1,024B) 0x40169D: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   |   | ->01.26% (1,024B) 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   |   |   
-|   |   ->01.26% (1,024B) 0x4016DB: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|   |   | ->01.26% (1,024B) 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
+->02.08% (8,192B) 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.08% (8,192B) 0x4AC204F: _IO_doallocbuf (genops.c:347)
+|   ->01.04% (4,096B) 0x4ABF5C3: _IO_file_xsgetn (fileops.c:1288)
+|   | ->01.04% (4,096B) 0x4AB3062: fread (iofread.c:38)
+|   |   ->01.04% (4,096B) 0x1092FC: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   |   | ->01.04% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   |   |   
 |   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
 |   |   
-|   ->01.26% (1,024B) 0x4C57D27: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
-|     ->01.26% (1,024B) 0x4C56DD5: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.33.so)
-|       ->01.26% (1,024B) 0x4C4B780: fwrite (in /usr/lib64/libc-2.33.so)
-|         ->01.26% (1,024B) 0x40171C: steganographyDecrypt(char const*, char const*, char const*) (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|         | ->01.26% (1,024B) 0x4011B1: main (in /home/lmi/SeS/Labo04_Valgrind/bitmap/bitmap)
-|         |   
-|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
-|         
-->01.74% (1,416B) 0x4C4ACDE: __fopen_internal (in /usr/lib64/libc-2.33.so)
-| ->01.74% (1,416B) in 6 places, all below massif's threshold (1.00%)
+|   ->01.04% (4,096B) 0x4AC10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.04% (4,096B) 0x4ABF834: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.04% (4,096B) 0x4ABF834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.04% (4,096B) 0x4AB3540: fwrite (iofwrite.c:39)
+|           ->01.04% (4,096B) 0x10931F: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|             ->01.04% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|               
+->01.07% (4,200B) 0x10937D: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->01.07% (4,200B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
 |   
-->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+->00.24% (944B) in 1+ places, all below ms_print's threshold (01.00%)
 
 --------------------------------------------------------------------------------
   n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
 --------------------------------------------------------------------------------
- 67      2,223,032            4,216            4,200            16            0
+ 57      1,860,792          364,104          361,744         2,360            0
+ 58      1,889,952          334,944          332,824         2,120            0
+ 59      1,919,112          305,784          303,904         1,880            0
+ 60      1,948,272          276,624          274,984         1,640            0
+ 61      1,977,432          247,464          246,064         1,400            0
+ 62      2,006,592          218,304          217,144         1,160            0
+ 63      2,035,752          189,144          188,224           920            0
+ 64      2,064,912          159,984          159,304           680            0
+ 65      2,094,072          130,824          130,384           440            0
+ 66      2,123,232          101,664          101,464           200            0
+99.80% (101,464B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->71.51% (72,704B) 0x48F1A99: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+| ->71.51% (72,704B) 0x4011B89: call_init.part.0 (dl-init.c:72)
+|   ->71.51% (72,704B) 0x4011C90: call_init (dl-init.c:30)
+|     ->71.51% (72,704B) 0x4011C90: _dl_init (dl-init.c:119)
+|       ->71.51% (72,704B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->15.17% (15,424B) 0x109402: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->15.17% (15,424B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   
+->08.06% (8,192B) 0x4AB1E83: _IO_file_doallocate (filedoalloc.c:101)
+| ->08.06% (8,192B) 0x4AC204F: _IO_doallocbuf (genops.c:347)
+|   ->04.03% (4,096B) 0x4ABF5C3: _IO_file_xsgetn (fileops.c:1288)
+|   | ->04.03% (4,096B) 0x4AB3062: fread (iofread.c:38)
+|   |   ->04.03% (4,096B) 0x1092FC: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   |   | ->04.03% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   |   |   
+|   |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   
+|   ->04.03% (4,096B) 0x4AC10AF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->04.03% (4,096B) 0x4ABF834: _IO_new_file_xsputn (fileops.c:1244)
+|       ->04.03% (4,096B) 0x4ABF834: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->04.03% (4,096B) 0x4AB3540: fwrite (iofwrite.c:39)
+|           ->04.03% (4,096B) 0x10931F: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|             ->04.03% (4,096B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|               
+->04.13% (4,200B) 0x10937D: steganographyEncrypt(char const*, char const*, char const*) (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+| ->04.13% (4,200B) 0x10924A: main (in /mnt/c/Users/quent/Documents/HES-SO/SeS_Laboratoires/Labo04_Valgrind/bitmap/bitmap)
+|   
+->00.93% (944B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67      2,153,536           82,496           82,416            80            0
+ 68      2,182,592           81,520           81,472            48            0
+ 69      2,259,896            4,216            4,200            16            0
