@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "bitmap.C": "cpp",
+        "bitmap_corr.C": "cpp"
+    }
+}

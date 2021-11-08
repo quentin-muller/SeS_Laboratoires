@@ -74,25 +74,25 @@ int main(void)
 
 static void steganographyEncrypt (const char *pSrc, const char *pDst, const char *pHiddenSource)
 {
-FILE *pFileSource;
-FILE *pFileDest;
-FILE *pFileHiddenSource;
-int         i;
+	FILE *pFileSource;
+	FILE *pFileDest;
+	FILE *pFileHiddenSource;
+	int         i;
 
-struct {
-	BITMAP_HEADER1	h1;
-	BITMAP_HEADER2	h2;
-	unsigned long   nb_byte_line;
-	RGB 	      **p_buffer;			
-	RGB    	      **p_row;
-}			bitmap;
-struct {
-	BITMAP_HEADER1	h1;
-	BITMAP_HEADER2	h2;
-	unsigned long   nb_byte_line;
-    RGB            *p_buffer;			
-	RGB            *p_rgb;
-}			hiddenText;
+	struct {
+		BITMAP_HEADER1	h1;
+		BITMAP_HEADER2	h2;
+		unsigned long   nb_byte_line;
+		RGB 	      **p_buffer;			
+		RGB    	      **p_row;
+	}			bitmap;
+	struct {
+		BITMAP_HEADER1	h1;
+		BITMAP_HEADER2	h2;
+		unsigned long   nb_byte_line;
+		RGB            *p_buffer;			
+		RGB            *p_rgb;
+	}			hiddenText;
 
 	/* Open the files */
     pFileSource = fopen(pSrc, "rb");

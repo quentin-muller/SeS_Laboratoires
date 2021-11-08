@@ -9,7 +9,8 @@ HOME_DIR=/home/lmi              # user home directory
 SD_ROOT_PART1=${SD_ROOT_FOLDER}1
 SD_ROOT_PART2=${SD_ROOT_FOLDER}2
 
-umount $SD_ROOT_FOLDER
+umount $SD_ROOT_PART1
+umount $SD_ROOT_PART2
 #initialize 480MiB to 0
 sudo dd if=/dev/zero of=$SD_ROOT_FOLDER count=120000
 sync
@@ -23,14 +24,13 @@ sudo dd if=${HOME_DIR}/workspace/nano/buildroot/output/images/sunxi-spl.bin of=$
 #copy u-boot
 sudo dd if=${HOME_DIR}/workspace/nano/buildroot/output/images/u-boot.itb of=$SD_ROOT_FOLDER bs=512 seek=80
 
-
 # 1st partition: 64MiB: (163840-32768)*512/1024 = 64MiB
 sudo parted $SD_ROOT_FOLDER mkpart primary ext4 32768s 163839s
 
 # 2nd partition: 1GiB: 4358144-163840)*512/1024 = 2GiB
 sudo parted $SD_ROOT_FOLDER mkpart primary ext4 163840s 4358143s
-sudo mkfs.ext4 $SD_ROOT_PART1 -L BOOT # Change line "-L" is for Volume Label
 sudo mkfs.ext4 $SD_ROOT_PART2 -L rootfs
+sudo mkfs.ext4 $SD_ROOT_PART1 -L BOOT # Change line "-L" is for Volume Label
 sync
 
 #copy kernel, flattened device tree, boot.scr
@@ -42,8 +42,8 @@ sync
 
 
 #Rename 1st partition to BOOT
-#sudo umount $SD_ROOT_PART1
-#sudo fatlabel $SD_ROOT_PART1 BOOT
+sudo umount $SD_ROOT_PART1
+sudo e2label $SD_ROOT_PART1 BOOT
 #copy rootfs
 sudo dd if=${HOME_DIR}/workspace/nano/buildroot/output/images/rootfs.ext4 of=$SD_ROOT_PART2
 # Resize and rename 2nd partition to rootfs
