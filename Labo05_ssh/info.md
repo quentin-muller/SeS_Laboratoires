@@ -28,3 +28,8 @@
 - cd nanopi/bin
 - file ssh -> pour vérifier le stripped
 
+## Partie 5
+
+1. ./ssh-keygen -t rsa -b 4096 -C "quentin.muller@bluewin.ch"
+2. ./ssh-keygen -t dsa -b 1024 -C "quentin.muller@bluewin.ch"
+3. 
