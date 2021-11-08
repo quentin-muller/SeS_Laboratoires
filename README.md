@@ -10,3 +10,9 @@
 hwinfo --block --short
 ```
 
+## Copie d'un fichier 
+
+```bash
+scp file root@192.168.0.11:
+```
+
