@@ -1,0 +1,1 @@
+aarch64-none-linux-gnu-gcc soft_Q2.c -o compileFile

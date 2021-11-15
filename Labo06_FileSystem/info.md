@@ -20,9 +20,13 @@ La root est décrite sur la première ligne root=xxxx
 
 taper mount sur la nanopi avec minicom
 
+### 3. what are the major and minor
+
 taper `ls /dev/root -al` pour savoir sur quelle stockage c'est fixé
 
 taper `ls -al /dev/mmc*` regarder le résultat
+
+celui a regarder est le mmcblk0 -> 179, 0
 
 ## Question 2 filesystem
 
@@ -32,7 +36,7 @@ with fdisk
 
 `sudo fdisk /dev/sdb`  puis n et p puis 3 -> 5'242'880
 
-LA fin de la partition 2 est à 4'358'143 donc on peut utiliser la mémoire a partir de 4'358'144 le multiple rond de 1'048'576 est 5 fois soit 5'242'880
+La fin de la partition 2 est à 4'358'143 donc on peut utiliser la mémoire a partir de 4'358'144 le multiple rond de 1'048'576 est 5 fois soit 5'242'880
 
 le prochain multiple de 2^20 est 5'242'880
 
@@ -57,9 +61,31 @@ $$
 
 1. btrfs
 
-   1. installer les outils
-   2. formater la partition en btrfs avec `sudo mkfs.btrfs /dev/sdb3`
+   1. installer les outils slide 17 `sudo dnf install xxxxxx` 
+   2. formater la partition en btrfs avec `sudo mkfs.btrfs /dev/sdb3 -L btrfs`
 
    
 
 2. f2fs
+
+   1. installer les outils slide 19 `sudo dnf install xxxxxx` 
+   2. formater la partition en f2fs avec `sudo mkfs.f2fs /dev/sdb4 -L f2fs`
+
+   
+   
+   
+   
+   sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/btrfs/
+   sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/f2fs/
+   
+   sur la nanopi :
+   
+   créer un dossier avec `mkdir /mnt/btrfs`
+   
+   monter la partition dans ce dossier `mount /dev/mmcblk0p3 /mnt/btrfs`
+   
+   aller dans le dossier `cd /mnt/btrfs`
+   
+   lancer le fichier cross complié `./compileFile`
+   
+   
