@@ -1,10 +1,12 @@
-DEVICE = /dev/sdb3
+#!/bin/sh
 
-sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE
+DEVICE=/dev/sdb3
+
+sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q
 
 sudo cryptsetup luksDump $DEVICE
 
-sudo cryptsetup --debug open --type luks $DEVICE usrfs1
+sudo cryptsetup --debug open --type luks $DEVICE usrfs1 #--key-file ilovelmi
 
 sudo mkfs.ext4 /dev/mapper/usrfs1
 

@@ -88,4 +88,59 @@ $$
    
    lancer le fichier cross complié `./compileFile`
    
+   # Question 3 
    
+   ## Partie 1 LUKS
+   
+   on a modifier le fichier generate.sh pour y ajouter une troisième partition.
+   
+   ```bash
+   sudo parted $SD_ROOT_FOLDER mkpart primary ext4 5242880s 9338879s
+   sudo mkfs.ext4 $SD_ROOT_PART3 -L LUKS
+   ```
+   
+   ## Partie 2
+   
+   ### init
+   
+   ```bash
+   #!/bin/sh
+   DEVICE=/dev/sdb3
+   sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q
+   sudo cryptsetup luksDump $DEVICE
+   sudo cryptsetup --debug open --type luks $DEVICE usrfs1 #--key-file ilovelmi
+   sudo mkfs.ext4 /dev/mapper/usrfs1
+   sudo mount /dev/mapper/usrfs1 /mnt/usrfs
+   ```
+   
+   ### copy
+   
+   ```bash
+   sudo cp $LOCAL_PATH/copie_text.txt /mnt/usrfs
+   ```
+   
+   ### add new passphrase
+   
+   ```bash
+   DEVICE=/dev/sdb3
+   sudo umount $DEVICE
+   sudo cryptsetup luksAddKey $DEVICE
+   ... 'iloveses'
+   ```
+   
+   ### dump header
+   
+   ```bash
+   sudo cryptsetup luksDump $DEVICE
+   ```
+   
+   ### dd command
+   
+   ```bash
+   sudo dd if=/dev/sdb3 of=$PATH/file.txt bs=1M count=1
+   ```
+   
+   
+   
+   
+
