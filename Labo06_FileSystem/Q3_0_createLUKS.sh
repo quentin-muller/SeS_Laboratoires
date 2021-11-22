@@ -2,7 +2,7 @@
 
 DEVICE=/dev/sdb3
 
-sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q
+sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q 
 
 sudo cryptsetup luksDump $DEVICE
 
