@@ -1,15 +1,55 @@
 #!/bin/sh
+
 DEVICE=/dev/sdb3
-PATH=/home/lmi/VM_SeS/luks_header
+
+PATH_LOCAL=/home/lmi/VM_SeS/luks_header
+
+echo "---------------------- Unmount device ------------------------------"
 
 sudo umount $DEVICE
 
-sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q --key-size=512 --key-file=${PATH}/rand_key.txt
+echo "-------------------------- Crypting partition --------------------------------------"
+
+sudo cryptsetup --debug --pbkdf pbkdf2 luksFormat $DEVICE -q --key-file ${PATH_LOCAL}/rand_key.txt
+
+echo "-------------------------- First Dump --------------------------------------"
 
 sudo cryptsetup luksDump $DEVICE
 
-sudo cryptsetup --debug open --type luks $DEVICE usrfs1
+echo "-------------------------- Add Key --------------------------------------"
+
+sudo cryptsetup luksAddKey $DEVICE --key-file ${PATH_LOCAL}/rand_key.txt
+
+echo "-------------------------- Second Dump --------------------------------------"
+
+sudo cryptsetup luksDump $DEVICE
+
+echo "-------------------------- Open --------------------------------------"
+
+sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
+
+echo "-------------------------- Close --------------------------------------"
+
+sudo cryptsetup --debug close --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
+
+echo "---------------------- Unmount device ------------------------------"
+
+sudo umount $DEVICE
+
+echo "---------------------- mkfs.ext4 LUKS ------------------------------"
 
 sudo mkfs.ext4 /dev/mapper/usrfs1 -L LUKS
 
+echo "---------------------- Unmount device ------------------------------"
+
+sudo umount $DEVICE
+
+echo "---------------------- mount /dev/mapper/usrfs1 ------------------------------"
+
 sudo mount /dev/mapper/usrfs1 /mnt/usrfs
+
+echo "-------------------------- dd ---------------------------"
+
+sudo dd if=$DEVICE of=$PATH_LOCAL/luks_file_2.txt bs=4M count=1
+
+echo "-------------------------- DONE ----------------------------"
