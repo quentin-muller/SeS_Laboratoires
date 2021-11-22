@@ -101,7 +101,7 @@ $$
    
    ## Partie 2
    
-   ### init
+   ### 3.2.1 init
    
    ```bash
    #!/bin/sh
@@ -113,13 +113,13 @@ $$
    sudo mount /dev/mapper/usrfs1 /mnt/usrfs
    ```
    
-   ### copy
+   ### 3.2.2 copy
    
    ```bash
    sudo cp $LOCAL_PATH/copie_text.txt /mnt/usrfs
    ```
    
-   ### add new passphrase
+   ### 3.2.3 add new passphrase
    
    ```bash
    DEVICE=/dev/sdb3
@@ -128,19 +128,68 @@ $$
    ... 'iloveses'
    ```
    
-   ### dump header
+   ### 3.2.4 dump header
    
    ```bash
    sudo cryptsetup luksDump $DEVICE
    ```
    
-   ### dd command
+   ### 3.2.5 dd command
    
    ```bash
-   sudo dd if=/dev/sdb3 of=$PATH/file.txt bs=1M count=1
+   sudo dd if=/dev/sdb3 of=${PATH_LOCAL}/file.txt bs=1M count=1
    ```
    
+   ### 3.2.5 Find header and 2 master key
+   
+   #### header
+   
+   sur la première ligne avc ctrl f sur key (c'est un dictionnaire d'informations)
+   
+   #### master key
+   
+   avec ghex dump on peut trouver la l'adresse aera offset le début de la master key et 512bits plus tard la fin ce qui nous donne la master key cryptée
+   
+   ### 3.2.6 connect to the nanopi
+   
+   dans minicom faire boot le nanopi
+   
+   lancer la commande `cryptsetup --debug open --type luks $DEVICE usrfs1` avec le passphrase 'ilovelmi'
+   
+   lancer `mkdir /mnt/usrfs`
+   
+   lancer `mount /dev/mapper/usrfs1 /mnt/usrfs`
    
    
    
+   ## Question 3.3 
+   
+   ### 3.3.1 generate random passphrase
+
+```bash
+sudo dd if=/dev/urandom of=${PATH_LOCAL}/rand_key.txt bs=64 count=1
+```
+
+### 3.3.2 init luks with keyfile
+
+fichier crypto_setup 
+
+### 3.3.5 cpy rootfs to luks
+
+```bash
+sudo dd if=~/workspace/nano/buildroot/output/images/rootfs.ext4 of=/dev/mapper/usrfs1 bs=4M
+```
+
+### 3.3.6  manual boot on nanopi 
+
+
+
+### 3.3.7 init script to mount automatically
+
+```bash
+```
+
+
+
+
 
