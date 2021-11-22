@@ -88,4 +88,11 @@ $$
    
    lancer le fichier cross complié `./compileFile`
    
+   # Question 3 
    
+   ## Partie 1 LUKS
+   
+   on a modifier le fichier generate.sh pour y ajouter une troisième partition.
+   
+   ``
+
