@@ -1,0 +1,28 @@
+#!/bin/sh
+
+DEVICE=/dev/sdb3
+
+PATH_LOCAL=/home/lmi/VM_SeS/luks_header
+
+sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
+
+
+echo "---------------------- mount /dev/mapper/usrfs1 ------------------------------"
+
+sudo mount /dev/mapper/usrfs1 /mnt/usrfs
+
+echo "-------------------------- dd ---------------------------"
+
+
+sudo dd if=/home/lmi/workspace/nano/buildroot/output/images/rootfs.ext4 of=/dev/mapper/usrfs1 bs=4M
+
+echo "---------------------- Unmount device ------------------------------"
+
+sudo umount /dev/mapper/usrfs1
+
+echo "-------------------------- Close --------------------------------------"
+
+sudo cryptsetup close usrfs1
+
+echo "-------------------------- DONE ----------------------------"
+
