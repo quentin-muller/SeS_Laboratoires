@@ -175,15 +175,18 @@ sudo dd if=~/workspace/nano/buildroot/output/images/rootfs.ext4 of=/dev/mapper/u
 
 ```bash
  cd workspace/nano/buildroot/board/friendlyarm/nanopi-neo-plus2/rootfs_overlay/etc
+
+ sudo cp /home/lmi/VM_SeS/luks_header/rand_key.txt ../etc
+ mv rand_key.txt passphrase
+
  nano S40luks
+
 ```
 
 ```bash
 DEVICE=/dev/mmcblk0p3
 
-PATH_LOCAL=/home/lmi/VM_SeS/luks_header
-
-sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
+sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file passphrase
 
 mkdir /mnt/usrfs
 

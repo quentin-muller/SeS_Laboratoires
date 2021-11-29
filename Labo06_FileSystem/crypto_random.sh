@@ -28,21 +28,9 @@ echo "-------------------------- Open --------------------------------------"
 
 sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
 
-echo "-------------------------- Close --------------------------------------"
-
-sudo cryptsetup --debug close --type luks $DEVICE usrfs1 --key-file ${PATH_LOCAL}/rand_key.txt
-
-echo "---------------------- Unmount device ------------------------------"
-
-sudo umount $DEVICE
-
 echo "---------------------- mkfs.ext4 LUKS ------------------------------"
 
 sudo mkfs.ext4 /dev/mapper/usrfs1 -L LUKS
-
-echo "---------------------- Unmount device ------------------------------"
-
-sudo umount $DEVICE
 
 echo "---------------------- mount /dev/mapper/usrfs1 ------------------------------"
 
@@ -50,6 +38,14 @@ sudo mount /dev/mapper/usrfs1 /mnt/usrfs
 
 echo "-------------------------- dd ---------------------------"
 
-sudo dd if=$DEVICE of=$PATH_LOCAL/luks_file_2.txt bs=4M count=1
+sudo dd if=/mnt/usrfs of=$PATH_LOCAL/luks_file_2.txt bs=4M count=1
+
+echo "---------------------- Unmount device ------------------------------"
+
+sudo umount /dev/mapper/usrfs1
+
+echo "-------------------------- Close --------------------------------------"
+
+sudo cryptsetup close usrfs1
 
 echo "-------------------------- DONE ----------------------------"
