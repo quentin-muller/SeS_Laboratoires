@@ -186,10 +186,10 @@ sudo dd if=~/workspace/nano/buildroot/output/images/rootfs.ext4 of=/dev/mapper/u
 ```bash
 DEVICE=/dev/mmcblk0p3
 
-sudo cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file passphrase
+cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file passphrase
 
 mkdir /mnt/usrfs
 
-sudo mount /dev/mapper/usrfs1 /mnt/usrfs
+mount /dev/mapper/usrfs1 /mnt/usrfs
 
 ```

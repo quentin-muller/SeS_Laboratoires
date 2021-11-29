@@ -38,7 +38,7 @@ sudo mount /dev/mapper/usrfs1 /mnt/usrfs
 
 echo "-------------------------- dd ---------------------------"
 
-sudo dd if=/mnt/usrfs of=$PATH_LOCAL/luks_file_2.txt bs=4M count=1
+sudo dd if=$PATH_LOCAL/luks_file_2.txt of=/mnt/usrfs bs=4M count=1
 
 echo "---------------------- Unmount device ------------------------------"
 
