@@ -184,6 +184,8 @@ sudo dd if=~/workspace/nano/buildroot/output/images/rootfs.ext4 of=/dev/mapper/u
 ```
 
 ```bash
+#!/bin/sh
+
 DEVICE=/dev/mmcblk0p3
 
 cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file passphrase
