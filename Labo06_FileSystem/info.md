@@ -208,3 +208,10 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 ./generate_sd_
 ```
 
+## 5 initramfs with luks
+
+**1 seul mot de passe**
+
+1. Ajouter les libraires pour utiliser cryptsetup `ldd cryptsetup` sur le nanopi
+2. Ajouter a sbin de initramfs le fichier de target/usr/sbin 
+3. Changer le /init avec cryptsetup open et /dev/mapper/usrfs1
