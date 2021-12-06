@@ -1,0 +1,15 @@
+openat(AT_FDCWD, "/lib64/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libcryptsetup.so.12", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libpopt.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libuuid.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libblkid.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libdevmapper.so.1.02", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libssl.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libcrypto.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libargon2.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib64/libjson-c.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib64/libatomic.so.1", O_RDONLY|O_CLOEXEC) = 3

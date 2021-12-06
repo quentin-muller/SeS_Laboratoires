@@ -205,7 +205,7 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 
 ```bash
 ./generate_initRAMfs.sh
-./generate_sd_
+./generate_sd_initramf.sh
 ```
 
 ## 5 initramfs with luks
@@ -214,4 +214,6 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 
 1. Ajouter les libraires pour utiliser cryptsetup `ldd cryptsetup` sur le nanopi
 2. Ajouter a sbin de initramfs le fichier de target/usr/sbin 
-3. Changer le /init avec cryptsetup open et /dev/mapper/usrfs1
+3. Ajouter dossier /run **Sinon ca plante**
+4. Changer le /init avec cryptsetup open et /dev/mapper/usrfs1
+5. Supprimer le S30luks de la copie de la partition 2 
