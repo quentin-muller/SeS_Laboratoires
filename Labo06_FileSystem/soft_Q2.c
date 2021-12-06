@@ -11,10 +11,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define SIZE 13
-#define SIZE_SMALL 1024
+#define SIZE 31
+
 #define NB_SMALL_FILE 1000
 #define NB_BIG_FILE 1
+
+#define SIZE_SMALL 1024
 #define SIZE_BIG 1048576
 
 static double diff(struct timespec start, struct timespec end);
@@ -73,7 +75,7 @@ static int writeSmallFiles()
 
     for (int i = 0; i < NB_SMALL_FILE; i++)
     {
-        sprintf(filename, "file_%03d.ses",i);
+        sprintf(filename, "Output/small/smallfile_%03d.ses",i);
         fp = fopen(filename,"w");
         if (fp == NULL)
         {
@@ -96,7 +98,7 @@ static int writeBigFile()
     char tab[SIZE_BIG];
     FILE * fp;
 
-    fp = fopen("file_big","w");
+    fp = fopen("Output/big/bigfile.ses","w");
     if (fp == NULL)
     {
         printf( "Cannot open file file_big\n");

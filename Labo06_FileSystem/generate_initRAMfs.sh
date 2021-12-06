@@ -4,13 +4,14 @@ ROOTFSLOC=ramfs
 HOME=/home/lmi
 echo "-------------------------- Begin --------------------------------------"
 cd $HOME
+mkdir Output
 mkdir $ROOTFSLOC
 mkdir -p $ROOTFSLOC/{bin,dev,etc,home,lib,lib64,newroot,proc,root,sbin,sys}
 
 echo "-------------------------- Cpy /dev -----------------------------------"
 cd $ROOTFSLOC/dev
 sudo mknod null c 1 3
-sudo mknod tty c 5 0
+#sudo mknod tty c 5 0
 sudo mknod console c 5 1
 sudo mknod random c 1 8
 sudo mknod urandom c 1 9
@@ -36,6 +37,7 @@ ln -s busybox umount
 ln -s busybox sh
 ln -s busybox sleep
 ln -s busybox dmesg
+ln -s busybox cryptsetup
 cp ~/workspace/nano/buildroot/output/target/usr/bin/strace .
 
 echo "-------------------------- Cpy /sbin -----------------------------------"
@@ -76,8 +78,8 @@ sudo chown -R 0:0 $ROOTFSLOC
 
 echo "--------------------- cpio / gzip / mkimage ----------------------------"
 cd $ROOTFSLOC
-find . | cpio --quiet -o -H newc > ../Initrd
-cd ..
+find . | cpio --quiet -o -H newc > ../Output/Initrd
+cd ../Output
 gzip -9 -c Initrd > Initrd.gz
 mkimage -A arm -T ramdisk -C none -d Initrd.gz uInitrd
 

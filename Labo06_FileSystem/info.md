@@ -30,9 +30,13 @@ celui a regarder est le mmcblk0 -> 179, 0
 
 ### 1. Create 2 new partitions (p3, p4)
 
-with fdisk
-
-`sudo fdisk /dev/sdb`  puis n et p puis 3 -> 5'242'880
+1. Taper ``sudo fdisk /dev/sdb`  puis n et p puis 3
+2. Start 5242880
+3. Stop 6062079
+4. Taper n et p puis 4
+5. Start 6291456
+6. Stop 7110655
+7. taper w (pour valider les changement)
 
 La fin de la partition 2 est à 4'358'143 donc on peut utiliser la mémoire a partir de 4'358'144 le multiple rond de 1'048'576 est 5 fois soit 5'242'880
 
@@ -60,24 +64,25 @@ $$
 
    1. installer les outils slide 17 `sudo dnf install xxxxxx`
    2. formater la partition en btrfs avec `sudo mkfs.btrfs /dev/sdb3 -L btrfs`
-
 2. f2fs
 
    1. installer les outils slide 19 `sudo dnf install xxxxxx`
-   2. formater la partition en f2fs avec `sudo mkfs.f2fs /dev/sdb4 -L f2fs`
+   2. formater la partition en f2fs avec `sudo mkfs.f2fs /dev/sdb4 -l f2fs`
 
-   sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/btrfs/
-   sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/f2fs/
+3. Copier du fichier complié
 
-   sur la nanopi :
+sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/btrfs/output_pc
+sudo cp /home/lmi/SeS/Labo06_FileSystem/compileFile /run/media/lmi/f2fs/output_pc
 
-   créer un dossier avec `mkdir /mnt/btrfs`
+sur la nanopi :
 
-   monter la partition dans ce dossier `mount /dev/mmcblk0p3 /mnt/btrfs`
+créer un dossier avec `mkdir /mnt/btrfs`
 
-   aller dans le dossier `cd /mnt/btrfs`
+monter la partition dans ce dossier `mount /dev/mmcblk0p3 /mnt/btrfs`
 
-   lancer le fichier cross complié `./compileFile`
+aller dans le dossier `cd /mnt/btrfs`
+
+lancer le fichier cross complié `./compileFile`
 
 ## Question 3
 
@@ -200,6 +205,6 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 
 ```bash
 ./generate_initRAMfs.sh
-./generate_s
+./generate_sd_
 ```
 
