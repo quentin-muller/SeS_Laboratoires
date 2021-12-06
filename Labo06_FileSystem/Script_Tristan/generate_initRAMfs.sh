@@ -47,7 +47,7 @@ cd ../lib64
 cp ~/workspace/nano/buildroot/output/target/lib64/ld-2.31.so .
 cp ~/workspace/nano/buildroot/output/target/lib64/libresolv-2.31.so .
 cp ~/workspace/nano/buildroot/output/target/lib64/libc-2.31.so .
-ln -s libresolv-2.30.so libresolv.so.2
+ln -s libresolv-2.31.so libresolv.so.2
 ln -s libc-2.31.so libc.so.6
 ln -s ../lib64/ld-2.31.so ld-linux-aarch64.so.1
 

@@ -195,3 +195,11 @@ mkdir /mnt/usrfs
 mount /dev/mapper/usrfs1 /mnt/usrfs
 
 ```
+
+## 4 initramfs
+
+```bash
+./generate_initRAMfs.sh
+./generate_s
+```
+
