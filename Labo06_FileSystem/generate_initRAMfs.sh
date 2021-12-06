@@ -6,7 +6,8 @@ echo "-------------------------- Begin --------------------------------------"
 cd $HOME
 mkdir Output
 mkdir $ROOTFSLOC
-mkdir -p $ROOTFSLOC/{bin,dev,etc,home,lib,lib64,newroot,proc,root,sbin,sys}
+mkdir -p $ROOTFSLOC/{bin,dev,etc,home,lib,lib64,usr,newroot,proc,root,sbin,sys}
+mkdir $ROOTFSLOC/usr/lib64
 
 echo "-------------------------- Cpy /dev -----------------------------------"
 cd $ROOTFSLOC/dev
@@ -52,6 +53,43 @@ cp ~/workspace/nano/buildroot/output/target/lib64/libc-2.31.so .
 ln -s libresolv-2.31.so libresolv.so.2
 ln -s libc-2.31.so libc.so.6
 ln -s ../lib64/ld-2.31.so ld-linux-aarch64.so.1
+
+# Ajout depuis ~/target/lib64
+cp ~/workspace/nano/buildroot/output/target/lib64/libm-2.31.so .
+cp ~/workspace/nano/buildroot/output/target/lib64/librt-2.31.so .
+cp ~/workspace/nano/buildroot/output/target/lib64/libdl-2.31.so .
+cp ~/workspace/nano/buildroot/output/target/lib64/libpthread-2.31.so .
+cp ~/workspace/nano/buildroot/output/target/lib64/libatomic.so.1.2.0 .
+cp ~/workspace/nano/buildroot/output/target/lib64/libuuid.so.1.3.0 .
+cp ~/workspace/nano/buildroot/output/target/lib64/libblkid.so.1.1.0 .
+
+ln -s ../lib64/libm-2.31.so libm.so.6
+ln -s ../lib64/librt-2.31.so librt.so.1
+ln -s ../lib64/libdl-2.31.so libdl.so.2 
+ln -s ../lib64/libpthread-2.31.so libpthread.so.0
+ln -s ../lib64/libatomic.so.1.2.0 libatomic.so.1
+ln -s ../lib64/libuuid.so.1.3.0 libuuid.so.1
+ln -s ../lib64/libblkid.so.1.1.0 libblkid.so.1
+
+echo "----------------------- Cpy /usr/lib64---------------------------------"
+cd ../usr/lib64
+
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libjson-c.so.5.1.0 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libcrypto.so.1.1 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libssl.so.1.1 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libargon2.so.1 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libdevmapper.so.1.02 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libpopt.so.0.0.1 .
+cp ~/workspace/nano/buildroot/output/target/usr/lib64/libcryptsetup.so.12.6.0 .
+
+
+ln -s ../usr/lib64/libjson-c.so.5.1.0 libjson-c.so.5
+ln -s ../usr/lib64/libcrypto.so.1.1 libcrypto.so
+ln -s ../usr/lib64/libssl.so.1.1 libssl.so
+ln -s ../usr/lib64/libargon2.so.1 libargon2.so
+ln -s ../usr/lib64/libdevmapper.so.1.02 libdevmapper.so
+ln -s ../usr/lib64/libpopt.so.0.0.1 libpopt.so.0
+ln -s ../usr/lib64/libcryptsetup.so.12.6.0 libcryptsetup.so.12
 
 echo "-------------------------- Cpy /lib -----------------------------------"
 cd ../lib
