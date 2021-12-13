@@ -8,9 +8,12 @@ HOME_DIR=/home/lmi              # user home directory
 
 SD_ROOT_PART1=${SD_ROOT_FOLDER}1
 SD_ROOT_PART2=${SD_ROOT_FOLDER}2
+#SD_ROOT_PART2=${SD_ROOT_FOLDER}3
 
 umount $SD_ROOT_PART1
 umount $SD_ROOT_PART2
+#umount $SD_ROOT_PART3
+
 #initialize 480MiB to 0
 sudo dd if=/dev/zero of=$SD_ROOT_FOLDER count=120000
 sync

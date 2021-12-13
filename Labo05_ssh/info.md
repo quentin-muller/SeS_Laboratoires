@@ -28,6 +28,52 @@
 - cd nanopi/bin
 - file ssh -> pour vérifier le stripped
 
+## Partie 4
+
+1. Copier les 4 fichier sur /root/sshd -> moduli, ssh-keygen, sshd_config, sshd
+
+2. Ajouter le fichier genKey.sh pour generer les clés
+
+3. Sur la VM changer l'adresse ip source et la route avec les commandes ci-dessous
+
+   ```bash
+   sudo ifconfig ens160u1 192.168.0.1 netmask 255.255.255.0
+   sudo ip route add 192.168.0.11 via 192.168.0.1
+   ```
+
+4. Ajouter un utilisateur sur le nanopi
+
+   ```bash
+   mkdir /home
+   mkdir /home/sshd
+   adduser sshd -h /home/sshd # ajouter une mot de passe 'ilovelmi'
+   ```
+
+5. Init de sshd
+
+   ```bash
+   /etc/init.d/S50dropbear stop #couper l'autre soft
+   cd /root/sshd
+   ./genKey.sh
+   /root/sshd/sshd
+   ```
+
+6. Config de ssh
+
+   1. Sur la nanopi aller copier le contenu de `cat ssh_host_ed25519_key.pub`
+   2. Sur la VM collé le contenu dans `nano /home/lmi/.ssh/known_hosts`
+   3. Sur la nanopi taper `mkdir /var/empty`
+
+7. Se connecter depuis la VM sur la nanopi
+
+   ```bash
+   ssh sshd@192.168.0.11 # avec le mot de passe 'ilovelmi'
+   ```
+
+8. Prier
+
+
+
 ## Partie 5
 
 1. ./ssh-keygen -t rsa -b 4096 -C "quentin.muller@bluewin.ch"
