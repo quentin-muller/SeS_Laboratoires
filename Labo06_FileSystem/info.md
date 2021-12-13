@@ -217,3 +217,4 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 3. Ajouter dossier /run **Sinon ca plante**
 4. Changer le /init avec cryptsetup open et /dev/mapper/usrfs1
 5. Supprimer le S30luks de la copie de la partition 2 
+6. Copier la keyfile à la racine de initramfs
