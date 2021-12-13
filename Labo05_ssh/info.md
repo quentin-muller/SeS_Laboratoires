@@ -30,9 +30,18 @@
 
 ## Partie 4
 
+lancer `./generate_sd_ext4.sh`
+
+## Partie 5
+
 1. Copier les 4 fichier sur /root/sshd -> moduli, ssh-keygen, sshd_config, sshd
 
 2. Ajouter le fichier genKey.sh pour generer les clés
+
+   Exemple
+
+   1. ./ssh-keygen -t rsa -b 4096 -C "quentin.muller@bluewin.ch"
+   2. ./ssh-keygen -t dsa -b 1024 -C "quentin.muller@bluewin.ch"
 
 3. Sur la VM changer l'adresse ip source et la route avec les commandes ci-dessous
 
@@ -72,10 +81,21 @@
 
 8. Prier
 
+## Partie 6
 
+```bash
+#AddressFamily any
+AddressFamily inet
 
-## Partie 5
+#AllowTcpForwarding yes
+AllowTcpForwarding no
 
-1. ./ssh-keygen -t rsa -b 4096 -C "quentin.muller@bluewin.ch"
-2. ./ssh-keygen -t dsa -b 1024 -C "quentin.muller@bluewin.ch"
-3. 
+#PermitRootLogin prohibit-password
+PermitRootLogin no
+
+#Ajouter
+Ciphers aes256-cbc,aes256-ctr,aes128-cbc,hmac-sha-256,hmac-sha1
+
+#Banner none
+Banner "Labo05 SSH Quentin et Tristan"
+```

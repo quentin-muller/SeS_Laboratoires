@@ -55,6 +55,3 @@ sudo e2fsck -f $SD_ROOT_PART2
 sudo resize2fs $SD_ROOT_PART2
 sudo e2label $SD_ROOT_PART2 rootfs
 
-echo " Copie "
-sudo mkdir ${LOCAL_MNT_POINT}/rootfs/root/sshd
-sudo cp ${HOME_DIR}/SeS/Labo05_ssh/nanopi/ToSend/* ${LOCAL_MNT_POINT}/rootfs/root/sshd/

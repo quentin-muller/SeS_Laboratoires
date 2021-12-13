@@ -11,7 +11,7 @@
 # default value.
 
 #Port 22
-#AddressFamily any
+AddressFamily inet
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 
@@ -21,6 +21,7 @@
 
 # Ciphers and keying
 #RekeyLimit default none
+Ciphers aes256-cbc,aes256-ctr,aes128-cbc,hmac-sha-256,hmac-sha1f
 
 # Logging
 #SyslogFacility AUTH
@@ -29,7 +30,7 @@
 # Authentication:
 
 #LoginGraceTime 2m
-#PermitRootLogin prohibit-password
+PermitRootLogin no
 #StrictModes yes
 #MaxAuthTries 6
 #MaxSessions 10
@@ -82,7 +83,7 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #UsePAM no
 
 #AllowAgentForwarding yes
-#AllowTcpForwarding yes
+AllowTcpForwarding no
 #GatewayPorts no
 #X11Forwarding no
 #X11DisplayOffset 10
@@ -103,7 +104,7 @@ AuthorizedKeysFile	.ssh/authorized_keys
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner "Labo05 SSH Quentin et Tristan"
 
 # override default of no subsystems
 Subsystem	sftp	/home/lmi/SeS/Labo05_ssh/nanopi/libexec/sftp-server
