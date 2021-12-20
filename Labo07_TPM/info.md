@@ -11,7 +11,7 @@ sudo dnf -y install libtasn1-devel expect socat python3-twisted fuse-devel glib2
 
 sudo dnf install libtpms-devel
 
-sudo dnf install libseccomp-
+sudo dnf install libseccomp-devel
 
 ./autogen.sh --with-openssl --prefix=/usr
 
