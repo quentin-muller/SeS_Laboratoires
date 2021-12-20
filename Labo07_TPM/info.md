@@ -27,6 +27,18 @@ export TPM2TOOLS_TCTI="swtpm:port=2321"
 ## Démarrage de swtpm
 
 ```bash
+cd
+mkdir server
+cd server
+mkdir tpm 
+cd tpm
+mkdir swtpm2
+cd
+```
+
+
+
+```bash
 swtpm socket --tpmstate dir=/home/lmi/server/tpm/swtpm2 --tpm2 --server type=tcp,port=2321 --ctrl type=tcp,port=2322 --flags not-need-init,startup-clear
 ```
 
