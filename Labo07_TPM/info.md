@@ -49,3 +49,23 @@ sudo dnf install tpm2-tss
 sudo dnf install tpm2-tools
 ```
 
+## Question 1
+
+### 1.1 Create primary owner key with rsa2048
+
+```bash
+tpm2_createprimary -C o -G rsa2048 -c o_primary.ctx
+
+tpm2_getcap handles-transient
+
+tpm2_flushcontext -t
+
+tpm2_createprimary -C o -G rsa2048 -c o_primary.ctx
+
+tpm2_evictcontrol –c o_primary.ctx
+
+tpm2_getcap handles-transient
+
+tpm2_getcap handles-persistent 2> /dev/null
+```
+
