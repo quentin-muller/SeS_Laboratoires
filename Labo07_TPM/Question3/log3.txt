@@ -1,0 +1,21 @@
+[lmi@fedora Question3]$ ./Q3.sh && ls -al
+--------------- Begin ---------------
+-------- Flush previous key ---------
+------- Load private kex (RAM) -------
+name: 000b2fc470e1b4f68fc580fac5b08d8ba13e99137c29e63c1ce7517a240d4d79fdcb
+------ Show transient key (RAM) ------
+- 0x80000000
+---- Decrypt with the private key ----
+-------- Print decrypted text --------
+Happy new year 2022
+---------------- DONE ----------------
+total 14
+drwxrwxrwx. 1 lmi lmi 4096 Dec 28 14:36 .
+drwxrwxrwx. 1 lmi lmi 4096 Dec 28 14:27 ..
+-rwxrwxrwx. 1 lmi lmi   19 Dec 28 14:37 cleartext
+-rwxrwxrwx. 1 lmi lmi  256 Dec 28 13:27 encryptedtext
+drwxrwxrwx. 1 lmi lmi    0 Dec 28 13:43 Figures
+-rwxrwxrwx. 1 lmi lmi    0 Dec 28 14:36 log3.txt
+-rwxrwxrwx. 1 lmi lmi  712 Dec 28 14:24 Q3.sh
+-rwxrwxrwx. 1 lmi lmi 1562 Dec 28 14:37 rsa_key
+-rwxrwxrwx. 1 lmi lmi 1675 Dec 28 13:27 rsa_key.pem

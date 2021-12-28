@@ -1,0 +1,72 @@
+[lmi@fedora Question1]$ ./Q1.sh && ls -al
+--------------- Begin ---------------
+-------- Flush previous code --------
+------ Create primary owner key ------
+name-alg:
+  value: sha256
+  raw: 0xb
+attributes:
+  value: fixedtpm|fixedparent|sensitivedataorigin|userwithauth|restricted|decrypt
+  raw: 0x30072
+type:
+  value: rsa
+  raw: 0x1
+exponent: 65537
+bits: 2048
+scheme:
+  value: null
+  raw: 0x10
+scheme-halg:
+  value: (null)
+  raw: 0x0
+sym-alg:
+  value: aes
+  raw: 0x6
+sym-mode:
+  value: cfb
+  raw: 0x43
+sym-keybits: 128
+rsa: a5f50d3a5c54a5603b5327498a7b3ebd16e25247aeb4a9baa65a215415fd34e88916cbfa5020904a6a462b5699a4341fa1ff11ead2a751d249dfa19f9d1b9f0c5a281c3ff2e2ae6aebca47f30dad22ff03c4c1059a60cd7de4014ce9dec06195e32b8eb8693e06cf7bd6795b249d8ce97ac8f188f9a3b9ad1142fa2e22089c542434edb539d637b75a7979d15a4555e6aed86a35d8b5f536f93fba8f82f0537e97cc9dfe5a56ac255ca92d60c7f2505441006717c81f15e3dca102fc4a540a19a9f33cf0c57c98a7210b4159d33d54d564a9ad4eb776a245922298c26cdf54eb2ba451159bcf362f50070ac561d719429cce1fc0eac6f003656817ba5f7181d9
+------ Show transient key (RAM) ------
+- 0x80000000
+--------- Flush current key ----------
+------ Create primary owner key ------
+name-alg:
+  value: sha256
+  raw: 0xb
+attributes:
+  value: fixedtpm|fixedparent|sensitivedataorigin|userwithauth|restricted|decrypt
+  raw: 0x30072
+type:
+  value: rsa
+  raw: 0x1
+exponent: 65537
+bits: 2048
+scheme:
+  value: null
+  raw: 0x10
+scheme-halg:
+  value: (null)
+  raw: 0x0
+sym-alg:
+  value: aes
+  raw: 0x6
+sym-mode:
+  value: cfb
+  raw: 0x43
+sym-keybits: 128
+rsa: a5f50d3a5c54a5603b5327498a7b3ebd16e25247aeb4a9baa65a215415fd34e88916cbfa5020904a6a462b5699a4341fa1ff11ead2a751d249dfa19f9d1b9f0c5a281c3ff2e2ae6aebca47f30dad22ff03c4c1059a60cd7de4014ce9dec06195e32b8eb8693e06cf7bd6795b249d8ce97ac8f188f9a3b9ad1142fa2e22089c542434edb539d637b75a7979d15a4555e6aed86a35d8b5f536f93fba8f82f0537e97cc9dfe5a56ac255ca92d60c7f2505441006717c81f15e3dca102fc4a540a19a9f33cf0c57c98a7210b4159d33d54d564a9ad4eb776a245922298c26cdf54eb2ba451159bcf362f50070ac561d719429cce1fc0eac6f003656817ba5f7181d9
+------ Save owner key in NV-RAM ------
+persistent-handle: 0x81000000
+action: persisted
+------ Show transient key (RAM) ------
+- 0x80000000
+- 0x80000001
+---- Show persistent key (NV-RAM) ----
+- 0x81000000
+---------------- DONE ----------------
+total 7
+drwxrwxrwx. 1 lmi lmi    0 Dec 21 15:09 .
+drwxrwxrwx. 1 lmi lmi 4096 Dec 28 14:27 ..
+-rwxrwxrwx. 1 lmi lmi 1602 Dec 28 14:38 o_primary.ctx
+-rwxrwxrwx. 1 lmi lmi  929 Dec 28 12:06 Q1.sh

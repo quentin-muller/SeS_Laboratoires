@@ -32,3 +32,5 @@ tpm2_getcap handles-transient
 
 echo "---- Show persistent key (NV-RAM) ----"
 tpm2_getcap handles-persistent
+
+echo "---------------- DONE ----------------"

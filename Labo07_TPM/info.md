@@ -76,7 +76,7 @@ echo "------ Create primary owner key ------"
 tpm2_createprimary -C o -G rsa2048 -c primary
 
 echo "------- Create child owner key -------"
-tpm2_create -C primary -G rsa2048 -u child_public -r child_private
+tpm2_create -C primary -G rsa2048 -u child_public -r child_private -c child_key
 
 echo "------ Show transient key (RAM) ------"
 tpm2_getcap handles-transient
@@ -102,10 +102,16 @@ tpm2_getcap handles-persistent
 ![Schéma d'encryption asymétrique](Question3/Figures/SchemaCrypt.png)
 
 ```bash
-# charger la clé privée dans le tpm (pas juste je pense)
+echo "------- Load private kex (RAM) -------"
 tpm2_loadexternal -C n -G rsa -r rsa_key.pem -c rsa_key
 
-# decrypt with the private key p.43
-tpm2_rsadecrypt -c rsa_key -s rsaes encryptedtext -o cleartext
+echo "------ Show transient key (RAM) ------"
+tpm2_getcap handles-transient
+
+echo "---- Decrypt with the private key ----"
+tpm2_rsadecrypt -c 0x80000000 -s rsaes encryptedtext -o cleartext
+
+echo "-------- Print decrypted text --------"
+cat cleartext
 ```
 
