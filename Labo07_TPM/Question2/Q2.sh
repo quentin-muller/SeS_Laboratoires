@@ -10,19 +10,10 @@ tpm2_evictcontrol -c 0x81000002 2> /dev/null
 tpm2_evictcontrol -c 0x81000003 2> /dev/null
 
 echo "------ Create primary owner key ------"
-tpm2_createprimary -C o -G rsa2048 -c o_primary.ctx
+tpm2_createprimary -C o -G rsa2048 -c primary
 
-echo "------ Show transient key (RAM) ------"
-tpm2_getcap handles-transient
-
-echo "--------- Flush current key ----------"
-tpm2_flushcontext -t
-
-echo "------ Create primary owner key ------"
-tpm2_createprimary -C o -G rsa2048 -c o_primary.ctx
-
-echo "------ Save owner key in NV-RAM ------"
-tpm2_evictcontrol -c o_primary.ctx
+echo "------- Create child owner key -------"
+tpm2_create -C primary -G rsa2048 -u child_public -r child_private
 
 echo "------ Show transient key (RAM) ------"
 tpm2_getcap handles-transient
@@ -30,4 +21,14 @@ tpm2_getcap handles-transient
 echo "---- Show persistent key (NV-RAM) ----"
 tpm2_getcap handles-persistent
 
-echo "---------------- DONE ----------------"
+#echo "----- Load child owner key (RAM) -----"
+#tpm2_load -C primary -u child_public -r child_private -c child
+
+echo "------ Save owner key in NV-RAM ------"
+tpm2_evictcontrol -c 0x80000001
+
+echo "------ Show transient key (RAM) ------"
+tpm2_getcap handles-transient
+
+echo "---- Show persistent key (NV-RAM) ----"
+tpm2_getcap handles-persistent
