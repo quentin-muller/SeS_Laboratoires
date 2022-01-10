@@ -218,3 +218,15 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 4. Changer le /init avec cryptsetup open et /dev/mapper/usrfs1
 5. Supprimer le S30luks de la copie de la partition 2 
 6. Copier la keyfile à la racine de initramfs
+
+
+## S30luks
+#!/bin/sh
+
+#DEVICE=/dev/mmcblk0p3
+
+#cryptsetup --debug open --type luks $DEVICE usrfs1 --key-file=/root/passphrase
+
+#mkdir /mnt/usrfs
+
+#mount /dev/mapper/usrfs1 /mnt/usrfs
