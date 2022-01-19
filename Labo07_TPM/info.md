@@ -99,7 +99,7 @@ tpm2_getcap handles-persistent
 
 ## Question 3
 
-![Schéma d'encryption asymétrique](Question3/Figures/SchemaCrypt.png)
+![Schéma d'encryption asymétrique](C:\Users\quent\Documents\HES-SO__Local\SeS_Laboratoires\Labo07_TPM\figures\Q3_SchemaCrypt.png)
 
 ```bash
 echo "------- Load private kex (RAM) -------"
@@ -115,3 +115,12 @@ echo "-------- Print decrypted text --------"
 cat cleartext
 ```
 
+## Question 4
+
+### partie 1
+
+plutot des schéma qui explique comment on doit faire 
+
+### partie 2
+
+etat dans les registre PCR qui contient des hash de linux si on modifie linux alors le hash est différent alors le PCR va avoir un stop car les deux hash sont différents 

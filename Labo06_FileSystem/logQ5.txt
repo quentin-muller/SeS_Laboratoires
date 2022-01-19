@@ -1,0 +1,91 @@
+# cryptsetup 2.3.4 processing "cryptsetup --debug open --type luks /dev/mmcblk0p3 usrfs1 --"
+# Running comTERM handl[    3.983043] random: cryptsetup: uninitialized urandom read (4 byt)
+# Unblocking interruption on signal.
+# Allocating context for crypt device /dev/mmcblk0p3.
+# Trying to open and read device /dev/mmcblk0p3 with direct-io.
+# Initialising device-mapper backend library.
+# Trying to load any crypt type from device /dev/mmcblk0p3.
+# Crypto backend (OpenSSL 1.1.1l  24 Aug 2021) initialized in cryptsetup library version 2..
+# Detected kernel Linux 5.8.6 aarch64.
+# Loading LUKS2 header (repair disabled).
+# Acquiring read lock for device /dev/mmcblk0p3.
+WARNING: Locking directory /run/cryptsetup is missing!
+# Opening lock resource file /run/cryptsetup/L_179:3
+# Verifying lock handle for /dev/mmcblk0p3.
+# Device /dev/mmcblk0p3 READ lock taken.
+# Trying to read primary LUKS2 header at offset 0x0.
+# Opening locked device /dev/mmcblk0p3
+# Veryfing locked device handle (bdev)
+# LUKS2 header version 2 of size 16384 bytes, checksum sha256.
+# Checksum:6b58b128b9826b96bac3034eb7e5cec76909fe3ceea806c835b0170efc1f8dbc (on-disk)
+# Checksum:6b58b128b9826b96bac3034eb7e5cec76909fe3ceea806c835b0170efc1f8dbc (in-memory)
+# Trying to read secondary LUKS2 header at offset 0x4000.
+# Reusing open ro fd on device /dev/mmcblk0p3
+# LUKS2 header version 2 of size 16384 bytes, checksum sha256.
+# Checksum:95f9223b2f50dd1179d6a4a92e512a85a13214788ba174e5a4d76c7f8fd772a8 (on-disk)
+# Checksum:95f9223b2f50dd1179d6a4a92e512a85a13214788ba174e5a4d76c7f8fd772a8 (in-memory)
+# Device size 2097152000, offset 16777216.
+# Device /dev/mmcblk0p3 READ lock released.
+# Not enough physical memory detected, PBKDF max memory decreased from 1048576kB to 242494k.
+# PBKDF argon2i, time_ms 2000 (iterations 0), max_memory_kb 242494, parallel_threads 4.
+# Activating volume usrfs1 using token -1.
+# File descriptor passphrase entry requested.
+# Activating volume usrfs1 [keyslot -1] using passphrase.
+# Creating directory "/dev/mapper"
+# Creating device /dev/mapper/control (10, 236)
+# dm version   [ opencount flush ]   [16384] (*1)
+# dm versions   [ opencount flush ]   [16384] (*1)
+# Detected dm-ioctl version 4.42.0.
+# Detected dm-crypt version 1.21.0.
+# Device-mapper backend running with UDEV support disabled.
+# dm status usrfs1  [ opencount noflush ]   [16384] (*1)
+# Keyslot 0 priority 1 != 2 (required), skipped.
+# Trying to open LUKS2 keyslot 0.
+# Reading keyslot area [0x8000].
+# Acquiring read lock for device /dev/mmcblk0p3.
+# Opening lock resource file /run/cryptsetup/L_179:3
+# Verifying lock handle for /dev/mmcblk0p3.
+# Device /dev/mmcblk0p3 READ lock taken.
+# Reusing open ro fd on device /dev/mmcblk0p3
+# Device /dev/mmcblk0p3 READ lock released.
+# Verifying key from keyslot 0, digest 0.
+# Loading key (64 bytes, type logon) in thread keyring.
+# dm versions   [ opencount flush ]   [16384] (*1)
+# dm status usrfs1  [ opencount noflush ]   [16384] (*1)
+# Calculated device size is 4063232 sectors (RW), offset 32768.
+# DM-UUID is CRYPT-LUKS2-529fb89618874a539f2e76ec510751d3-usrfs1
+# dm create usrfs1 CRYPT-LUKS2-529fb89618874a539f2e76ec510751d3-usrfs1 [ opencount flush ] )
+# dm reload   (253:0) [ opencount flush securedata ]   [16384] (*1)
+# dm resume usrfs1  [ opencount flush securedata ]   [16384] (*1)
+# usrfs1: Stacking NODE_ADD [   11.959201] EXT4-fs (dm-0): mounted filesystem with ordered )
+(253,0) 0:0 0600
+# usrfs1: Stacking NODE_READ_AHEAD 256 (flags=1)
+# usrfs1: Processing NODE_ADD (253,0) 0:0 0600
+# Created /dev/mapper/usrfs1
+# usrfs1: Processing NODE_READ_AHEAD 256 (flags=1)
+# usrfs1 (253:0): read ahead is 256
+# usrfs1: retaining kernel read ahead of 256 (requested 256)
+Key slot 0 unlocked.
+# Releasing crypt device /dev/mmcblk0p3 context.
+# Releasing device-mapper backend.
+# Closing read only fd for /dev/mmcblk0p3.
+# Unlocking memory.
+Command successful.
+--------------------- mount usrfs1----------------------
+--------------------- exec------------------------------
+[   12.132105] EXT4-fs (dm-0): re-mounted. Opts: (null)
+/etc/init.d/rcS: line 23: /etc/init.d/S00KernelParameter: Permission denied
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Starting mdev... OK
+Saving random seed: [   12.972851] random: dd: uninitialized urandom read (512 bytes read)
+OK
+Starting haveged: haveged: command socket is listening at fd 3
+OK
+Starting dropbear sshd: [   13.319741] random: crng init done
+OK
+
+Welcome to FriendlyARM Nanopi NEO Plus2
+buildroot login: root
+# 

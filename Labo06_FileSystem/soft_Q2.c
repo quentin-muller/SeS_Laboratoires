@@ -75,7 +75,7 @@ static int writeSmallFiles()
 
     for (int i = 0; i < NB_SMALL_FILE; i++)
     {
-        sprintf(filename, "Output/small/smallfile_%03d.ses",i);
+        sprintf(filename, "smallfile_%03d.ses",i);
         fp = fopen(filename,"w");
         if (fp == NULL)
         {
@@ -98,7 +98,7 @@ static int writeBigFile()
     char tab[SIZE_BIG];
     FILE * fp;
 
-    fp = fopen("Output/big/bigfile.ses","w");
+    fp = fopen("bigfile.ses","w");
     if (fp == NULL)
     {
         printf( "Cannot open file file_big\n");

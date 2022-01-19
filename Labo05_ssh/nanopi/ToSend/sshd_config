@@ -21,7 +21,7 @@ AddressFamily inet
 
 # Ciphers and keying
 #RekeyLimit default none
-Ciphers aes256-cbc,aes256-ctr,aes128-cbc,hmac-sha-256,hmac-sha1f
+#Ciphers aes256-cbc,aes256-ctr,aes128-cbc,hmac-sha-256,hmac-sha1
 
 # Logging
 #SyslogFacility AUTH

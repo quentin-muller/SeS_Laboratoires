@@ -83,6 +83,8 @@ lancer `./generate_sd_ext4.sh`
 
 ## Partie 6
 
+Dans le fichier `sshd_config`
+
 ```bash
 #AddressFamily any
 AddressFamily inet

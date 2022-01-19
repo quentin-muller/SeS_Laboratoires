@@ -212,6 +212,7 @@ mount /dev/mapper/usrfs1 /mnt/usrfs
 
 **1 seul mot de passe**
 
+1. `which cryptsetup`
 1. Ajouter les libraires pour utiliser cryptsetup `ldd cryptsetup` sur le nanopi
 2. Ajouter a sbin de initramfs le fichier de target/usr/sbin 
 3. Ajouter dossier /run **Sinon ca plante**
