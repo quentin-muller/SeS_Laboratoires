@@ -18,28 +18,28 @@ scp file root@192.168.0.11:/path
 
 ## TODO rendu labo02
 
-- [ ] Introduction
-- [ ] Labo 05
+- [x] Introduction
+- [x] Labo 05
   - [x] Partie 1 (rapport)
-  - [ ] Partie 2 (rapport)
-  - [ ] Partie 3  (rapport)
-  - [ ] Partie 4 (rapport)
-  - [ ] Partie 5 (rapport)
-  - [ ] Partie 6 (rapport)
-  - [ ] Partie 7 (à faire si on veux + rapport)
-- [ ] Labo 06
-  - [ ] Petite liste des points a activer avant le labo (dans le pdf du labo)
-  - [ ] 3.3.2 mettre les résultats et commenter
-  - [ ] 3.4.1 a regarder chez séb on a pas fait
-  - [ ] ajouter le script S40LUKS
-  - [ ] page 22 je ne comprend pas pk il y a le script la et pas le S40LUKS
-  - [ ] commentaire partie4
-- [ ] Labo7
-  - [ ] Partie 1 (rapport)
-  - [ ] Partie 2 (rapport)
-  - [ ] Partie 3 (rapport)
-  - [ ] Partie 4 (à faire + rapport)
-- [ ] Conclusion
+  - [x] Partie 2 (rapport)
+  - [x] Partie 3  (rapport)
+  - [x] Partie 4 (rapport)
+  - [x] Partie 5 (rapport)
+  - [x] Partie 6 (rapport)
+  - [x] Partie 7 (à faire si on veux + rapport)
+- [x] Labo 06
+  - [x] Petite liste des points a activer avant le labo (dans le pdf du labo)
+  - [x] 3.3.2 mettre les résultats et commenter
+  - [x] 3.4.1 a regarder chez séb on a pas fait
+  - [x] ajouter le script S40LUKS
+  - [x] page 22 je ne comprend pas pk il y a le script la et pas le S40LUKS
+  - [x] commentaire partie4
+- [x] Labo7
+  - [x] Partie 1 (rapport)
+  - [x] Partie 2 (rapport)
+  - [x] Partie 3 (rapport)
+  - [x] Partie 4 (à faire + rapport)
+- [x] Conclusion
 
 
 ## Introduction Rapport
